@@ -1,25 +1,16 @@
 //
-//  Document.m
+//  VXPlaybackController.m
 //  VLCX
 //
-//  Created by Guilherme Rambo on 15/12/14.
+//  Created by Guilherme Rambo on 16/12/14.
 //  Copyright (c) 2014 Guilherme Rambo. All rights reserved.
 //
 
-#import "VXDocument.h"
-#import "VXControllerView.h"
-#import "VXWindowDragView.h"
+#import "VXPlaybackController.h"
 
-@import VLCKit;
+@interface VXPlaybackController ()
 
-@interface VXDocument () <VLCMediaPlayerDelegate, VLCMediaDelegate>
-
-@property (strong) VLCMediaPlayer *player;
-@property (strong) VLCMedia *media;
-
-@property (weak) IBOutlet VXWindowDragView *dragView;
-@property (weak) IBOutlet VXControllerView *controllerView;
-@property (strong) IBOutlet VLCVideoView *videoView;
+@property (readonly) VLCMediaPlayer *player;
 
 @property (weak) IBOutlet NSButton *playPauseButton;
 
@@ -40,70 +31,35 @@
 
 @end
 
-@implementation VXDocument
+@implementation VXPlaybackController
 {
     BOOL _buttonIsPause;
 }
 
-- (instancetype)init {
-    if (!(self = [super init])) return nil;
-    
-    return self;
+- (VLCMediaPlayer *)player
+{
+    return (VLCMediaPlayer *)self.representedObject;
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *)aController {
-    [super windowControllerDidLoadNib:aController];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    // add the controllerView as an extra control so it fades out when the cursor leaves the window
-    [self.dragView addExtraControl:self.controllerView];
+    // we need to stop observing stuff when the window closes, so we don't crash
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSWindowWillCloseNotification object:self.view.window queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }];
+}
+
+- (void)setRepresentedObject:(id)representedObject
+{
+    [super setRepresentedObject:representedObject];
     
-    self.videoView.fillScreen = YES;
-    
-    self.player = [[VLCMediaPlayer alloc] initWithVideoView:self.videoView];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     // we want to be notified when the player's state or current time changes
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerStateChanged:) name:VLCMediaPlayerStateChanged object:self.player];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerTimeChanged:) name:VLCMediaPlayerTimeChanged object:self.player];
-    
-    // at this point we already have a VLCMedia object initialized because readFromURL: is called before windowControllerDidLoadNib:
-    [self.player setMedia:self.media];
-    
-    // start playing after a short delay,
-    // this short delay ensures there are no audio glitches when starting the playback
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-       [self.player play];
-    });
 }
-
-- (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
-{
-    // initialize a VLCMedia object with the file opened
-    self.media = [VLCMedia mediaWithPath:url.path];
-    self.media.delegate = self;
-    
-    return YES;
-}
-
-+ (BOOL)autosavesInPlace {
-    return YES;
-}
-
-- (NSString *)windowNibName {
-    return NSStringFromClass([self class]);
-}
-
-- (void)close
-{
-    // just make sure we are not called during deinitialization
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    // we need to stop the player before we destroy everything
-    [self.player stop];
-    
-    [super close];
-}
-
-#pragma mark State Management
 
 - (IBAction)playOrPause:(id)sender {
     // if we are playing, pause, if we are paused, play. Simple, huh?
@@ -128,31 +84,16 @@
     [self volumeSliderAction:nil];
 }
 
-/*
- volumeUpAction:, volumeDownAction: and muteAction: are not connected directly, they are routed to the First Responder in MainMenu.xib,
- so whatever VXDocument is the current First Responder will receive these actions when the menus are activated
- */
-- (IBAction)volumeUpAction:(id)sender
+- (void)volumeUp
 {
     self.volumeSlider.doubleValue += 10;
     [self volumeSliderAction:nil];
 }
 
-- (IBAction)volumeDownAction:(id)sender
+- (void)volumeDown
 {
     self.volumeSlider.doubleValue -= 10;
     [self volumeSliderAction:nil];
-}
-
-- (IBAction)muteAction:(id)sender
-{
-    if (self.player.audio.isMuted) {
-        [sender setState:NSOffState];
-        [self.player.audio setMute:NO];
-    } else {
-        [sender setState:NSOnState];
-        [self.player.audio setMute:YES];
-    }
 }
 
 - (IBAction)timeSliderAction:(id)sender {
@@ -162,19 +103,18 @@
     [self updateTimeLabels];
 }
 
-
 - (void)mediaDidFinishParsing:(VLCMedia *)aMedia
 {
     if (self.player.videoSize.width > 0) {
         // set the player window's aspectRatio to the aspect ratio of the video
-        self.windowForSheet.aspectRatio = self.player.videoSize;
+        self.view.window.aspectRatio = self.player.videoSize;
         
         // if the current size of the player window is not at the correct aspect ratio,
         // set the size of the player window to half the size of the video
         //
         // TODO: improve the sizing method, maybe use the screen size as a factor
-        if (NSWidth(self.windowForSheet.frame)/NSHeight(self.windowForSheet.frame) != self.player.videoSize.width/self.player.videoSize.height) {
-            [self.windowForSheet setFrame:NSMakeRect(self.windowForSheet.frame.origin.x, self.windowForSheet.frame.origin.y, round(self.player.videoSize.width*0.5), round(self.player.videoSize.height*0.5)) display:YES animate:NO];
+        if (NSWidth(self.view.window.frame)/NSHeight(self.view.window.frame) != self.player.videoSize.width/self.player.videoSize.height) {
+            [self.view.window setFrame:NSMakeRect(self.view.window.frame.origin.x, self.view.window.frame.origin.y, round(self.player.videoSize.width*0.5), round(self.player.videoSize.height*0.5)) display:YES animate:NO];
         }
     }
     
@@ -217,7 +157,7 @@
 
 - (void)updateTimeControls
 {
-    self.timeSlider.maxValue = self.media.length.intValue;
+    self.timeSlider.maxValue = self.player.media.length.intValue;
     self.timeSlider.intValue = self.player.time.intValue;
     
     [self updateTimeLabels];
@@ -270,7 +210,7 @@
     for (NSMenuItem *item in self.audioTracksMenu.itemArray) {
         [item setState:NSOffState];
     }
-
+    
     // now tick the current track menu item
     self.player.currentAudioTrackIndex = [self.player.audioTrackIndexes[[sender tag]] integerValue];
     [sender setState:NSOnState];

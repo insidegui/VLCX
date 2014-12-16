@@ -12,6 +12,7 @@
                 <outlet property="currentTimeLabel" destination="fgn-Nq-Z4X" id="4p8-NR-Slf"/>
                 <outlet property="dragView" destination="pda-6Q-zmn" id="llc-2L-aHy"/>
                 <outlet property="playPauseButton" destination="gUt-UA-mvL" id="8DD-1O-QIn"/>
+                <outlet property="playbackController" destination="D9o-lx-HwS" id="ccn-xJ-ySx"/>
                 <outlet property="subtitleTracksMenu" destination="yXd-ZP-qzt" id="rbR-wX-ygq"/>
                 <outlet property="timeLeftLabel" destination="TVy-Vu-IVB" id="oHR-Hl-ark"/>
                 <outlet property="timeSlider" destination="aTo-rq-maJ" id="DBx-Uq-QWz"/>
@@ -51,7 +52,7 @@
                                         </constraints>
                                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="fzx-Qp-90Q"/>
                                         <connections>
-                                            <action selector="timeSliderAction:" target="-2" id="DxZ-Vn-2Lc"/>
+                                            <action selector="timeSliderAction:" target="D9o-lx-HwS" id="7nG-Im-BgU"/>
                                         </connections>
                                     </slider>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" alphaValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="gUt-UA-mvL">
@@ -64,7 +65,7 @@ IA
 </string>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="playOrPause:" target="-2" id="FOZ-kH-khf"/>
+                                            <action selector="playOrPause:" target="D9o-lx-HwS" id="nAC-Qf-Og2"/>
                                         </connections>
                                     </button>
                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cte-wt-5vI">
@@ -74,7 +75,7 @@ IA
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="volumeMinAction:" target="-2" id="l7S-GR-bSF"/>
+                                            <action selector="volumeMinAction:" target="D9o-lx-HwS" id="Dun-Kk-0AH"/>
                                             <outlet property="menu" destination="yQo-hD-0ca" id="bbH-KP-lru"/>
                                         </connections>
                                     </button>
@@ -82,7 +83,7 @@ IA
                                         <rect key="frame" x="32" y="37" width="50" height="21"/>
                                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="200" doubleValue="100" tickMarkPosition="above" sliderType="linear" id="bW8-ah-8j9"/>
                                         <connections>
-                                            <action selector="volumeSliderAction:" target="-2" id="zyF-IO-v67"/>
+                                            <action selector="volumeSliderAction:" target="D9o-lx-HwS" id="qau-kX-j1h"/>
                                             <outlet property="menu" destination="yQo-hD-0ca" id="n8w-PK-Xdf"/>
                                         </connections>
                                     </slider>
@@ -93,7 +94,7 @@ IA
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="volumeMaxAction:" target="-2" id="MJK-wr-cZv"/>
+                                            <action selector="volumeMaxAction:" target="D9o-lx-HwS" id="DbF-QN-b3d"/>
                                             <outlet property="menu" destination="yQo-hD-0ca" id="5iB-9C-8Gm"/>
                                         </connections>
                                     </button>
@@ -173,6 +174,21 @@ IA
             </items>
             <point key="canvasLocation" x="-91" y="487.5"/>
         </menu>
+        <viewController id="D9o-lx-HwS" customClass="VXPlaybackController">
+            <connections>
+                <outlet property="audioOptionsMenu" destination="yQo-hD-0ca" id="ffU-y9-Omm"/>
+                <outlet property="audioTracksMenu" destination="CnZ-lk-SZE" id="AEA-Di-JtI"/>
+                <outlet property="currentTimeLabel" destination="fgn-Nq-Z4X" id="2IJ-IV-EqA"/>
+                <outlet property="playPauseButton" destination="gUt-UA-mvL" id="Pjl-0v-Ncm"/>
+                <outlet property="subtitleTracksMenu" destination="yXd-ZP-qzt" id="PJ1-8I-IZS"/>
+                <outlet property="timeLeftLabel" destination="TVy-Vu-IVB" id="JrK-t3-v4w"/>
+                <outlet property="timeSlider" destination="aTo-rq-maJ" id="Unq-hJ-MoP"/>
+                <outlet property="view" destination="TlB-vP-t32" id="Ha0-uj-0Ps"/>
+                <outlet property="volumeMaxButton" destination="jpZ-xs-OiW" id="mw5-Ao-8mP"/>
+                <outlet property="volumeMinButton" destination="cte-wt-5vI" id="C34-w6-3z0"/>
+                <outlet property="volumeSlider" destination="C6W-c4-DTe" id="x6K-eA-TIQ"/>
+            </connections>
+        </viewController>
     </objects>
     <resources>
         <image name="play" width="22" height="22"/>

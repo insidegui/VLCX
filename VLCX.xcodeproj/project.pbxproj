@@ -27,6 +27,7 @@
 		DD359D491A40798000895C55 /* wav.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D351A40798000895C55 /* wav.icns */; };
 		DD359D4A1A40798000895C55 /* wma.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D361A40798000895C55 /* wma.icns */; };
 		DD359D4B1A40798000895C55 /* wmv.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D371A40798000895C55 /* wmv.icns */; };
+		DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD359D4F1A4086E700895C55 /* VXPlaybackController.m */; };
 		DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257A1A3F699B00575E13 /* AppDelegate.m */; };
 		DDD9257D1A3F699B00575E13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257C1A3F699B00575E13 /* main.m */; };
 		DDD925801A3F699B00575E13 /* VXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257F1A3F699B00575E13 /* VXDocument.m */; };
@@ -75,6 +76,8 @@
 		DD359D351A40798000895C55 /* wav.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = wav.icns; path = "Design/deploy/File icons/wav.icns"; sourceTree = SOURCE_ROOT; };
 		DD359D361A40798000895C55 /* wma.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = wma.icns; path = "Design/deploy/File icons/wma.icns"; sourceTree = SOURCE_ROOT; };
 		DD359D371A40798000895C55 /* wmv.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = wmv.icns; path = "Design/deploy/File icons/wmv.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D4E1A4086E700895C55 /* VXPlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlaybackController.h; sourceTree = "<group>"; };
+		DD359D4F1A4086E700895C55 /* VXPlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlaybackController.m; sourceTree = "<group>"; };
 		DDD925741A3F699B00575E13 /* VLCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD925781A3F699B00575E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDD925791A3F699B00575E13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,8 +141,10 @@
 			children = (
 				DDD9257E1A3F699B00575E13 /* VXDocument.h */,
 				DDD9257F1A3F699B00575E13 /* VXDocument.m */,
+				DD359D4E1A4086E700895C55 /* VXPlaybackController.h */,
+				DD359D4F1A4086E700895C55 /* VXPlaybackController.m */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		DDD9256B1A3F699B00575E13 = {
@@ -312,6 +317,7 @@
 				DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */,
 				DDD9257D1A3F699B00575E13 /* main.m in Sources */,
 				DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */,
+				DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */,
 				DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

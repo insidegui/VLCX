@@ -1449,7 +1449,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>14121629</string>
+	<string>14121631</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1461,6 +1461,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>VXActualBundleVersion</key>
-	<string>29</string>
+	<string>31</string>
 </dict>
 </plist>

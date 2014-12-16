@@ -27,9 +27,6 @@
 @end
 
 @implementation VXDocument
-{
-    BOOL _buttonIsPause;
-}
 
 - (instancetype)init {
     if (!(self = [super init])) return nil;
@@ -69,11 +66,6 @@
     self.media = [VLCMedia mediaWithPath:url.path];
     
     return YES;
-}
-
-- (void)mediaDidFinishParsing:(VLCMedia *)aMedia
-{
-    
 }
 
 + (BOOL)autosavesInPlace {

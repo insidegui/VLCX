@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD359D381A40798000895C55 /* aiff.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D241A40798000895C55 /* aiff.icns */; };
+		DD359D391A40798000895C55 /* audio.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D251A40798000895C55 /* audio.icns */; };
+		DD359D3A1A40798000895C55 /* avi.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D261A40798000895C55 /* avi.icns */; };
+		DD359D3B1A40798000895C55 /* flv.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D271A40798000895C55 /* flv.icns */; };
+		DD359D3C1A40798000895C55 /* generic.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D281A40798000895C55 /* generic.icns */; };
+		DD359D3D1A40798000895C55 /* m4a.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D291A40798000895C55 /* m4a.icns */; };
+		DD359D3E1A40798000895C55 /* m4v.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D2A1A40798000895C55 /* m4v.icns */; };
+		DD359D3F1A40798000895C55 /* mkv.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D2B1A40798000895C55 /* mkv.icns */; };
+		DD359D401A40798000895C55 /* mov.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D2C1A40798000895C55 /* mov.icns */; };
+		DD359D411A40798000895C55 /* movie.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D2D1A40798000895C55 /* movie.icns */; };
+		DD359D421A40798000895C55 /* mp3.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D2E1A40798000895C55 /* mp3.icns */; };
+		DD359D431A40798000895C55 /* mpeg.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D2F1A40798000895C55 /* mpeg.icns */; };
+		DD359D441A40798000895C55 /* ogg.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D301A40798000895C55 /* ogg.icns */; };
+		DD359D451A40798000895C55 /* playlist.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D311A40798000895C55 /* playlist.icns */; };
+		DD359D461A40798000895C55 /* rm.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D321A40798000895C55 /* rm.icns */; };
+		DD359D471A40798000895C55 /* subtitle.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D331A40798000895C55 /* subtitle.icns */; };
+		DD359D481A40798000895C55 /* vob.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D341A40798000895C55 /* vob.icns */; };
+		DD359D491A40798000895C55 /* wav.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D351A40798000895C55 /* wav.icns */; };
+		DD359D4A1A40798000895C55 /* wma.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D361A40798000895C55 /* wma.icns */; };
+		DD359D4B1A40798000895C55 /* wmv.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D371A40798000895C55 /* wmv.icns */; };
+		DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257A1A3F699B00575E13 /* AppDelegate.m */; };
+		DDD9257D1A3F699B00575E13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257C1A3F699B00575E13 /* main.m */; };
+		DDD925801A3F699B00575E13 /* VXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257F1A3F699B00575E13 /* VXDocument.m */; };
+		DDD925831A3F699B00575E13 /* VXDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD925811A3F699B00575E13 /* VXDocument.xib */; };
+		DDD925851A3F699B00575E13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD925841A3F699B00575E13 /* Images.xcassets */; };
+		DDD925881A3F699B00575E13 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD925861A3F699B00575E13 /* MainMenu.xib */; };
+		DDD9259E1A3F69C200575E13 /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9259D1A3F69C200575E13 /* VLCKit.framework */; };
+		DDD9259F1A3F69C200575E13 /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9259D1A3F69C200575E13 /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925A31A3F6B9400575E13 /* VXPlayerWindow.m */; };
+		DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925B91A3F85D100575E13 /* VXWindowDragView.m */; };
+		DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925BC1A3F88EE00575E13 /* VXControllerView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DDD925A01A3F69C200575E13 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DDD9259F1A3F69C200575E13 /* VLCKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DD359D241A40798000895C55 /* aiff.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = aiff.icns; path = "Design/deploy/File icons/aiff.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D251A40798000895C55 /* audio.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = audio.icns; path = "Design/deploy/File icons/audio.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D261A40798000895C55 /* avi.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = avi.icns; path = "Design/deploy/File icons/avi.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D271A40798000895C55 /* flv.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = flv.icns; path = "Design/deploy/File icons/flv.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D281A40798000895C55 /* generic.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = generic.icns; path = "Design/deploy/File icons/generic.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D291A40798000895C55 /* m4a.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = m4a.icns; path = "Design/deploy/File icons/m4a.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D2A1A40798000895C55 /* m4v.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = m4v.icns; path = "Design/deploy/File icons/m4v.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D2B1A40798000895C55 /* mkv.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = mkv.icns; path = "Design/deploy/File icons/mkv.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D2C1A40798000895C55 /* mov.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = mov.icns; path = "Design/deploy/File icons/mov.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D2D1A40798000895C55 /* movie.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = movie.icns; path = "Design/deploy/File icons/movie.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D2E1A40798000895C55 /* mp3.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = mp3.icns; path = "Design/deploy/File icons/mp3.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D2F1A40798000895C55 /* mpeg.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = mpeg.icns; path = "Design/deploy/File icons/mpeg.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D301A40798000895C55 /* ogg.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ogg.icns; path = "Design/deploy/File icons/ogg.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D311A40798000895C55 /* playlist.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = playlist.icns; path = "Design/deploy/File icons/playlist.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D321A40798000895C55 /* rm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = rm.icns; path = "Design/deploy/File icons/rm.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D331A40798000895C55 /* subtitle.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = subtitle.icns; path = "Design/deploy/File icons/subtitle.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D341A40798000895C55 /* vob.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = vob.icns; path = "Design/deploy/File icons/vob.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D351A40798000895C55 /* wav.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = wav.icns; path = "Design/deploy/File icons/wav.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D361A40798000895C55 /* wma.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = wma.icns; path = "Design/deploy/File icons/wma.icns"; sourceTree = SOURCE_ROOT; };
+		DD359D371A40798000895C55 /* wmv.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = wmv.icns; path = "Design/deploy/File icons/wmv.icns"; sourceTree = SOURCE_ROOT; };
+		DDD925741A3F699B00575E13 /* VLCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDD925781A3F699B00575E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDD925791A3F699B00575E13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DDD9257A1A3F699B00575E13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DDD9257C1A3F699B00575E13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDD9257E1A3F699B00575E13 /* VXDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VXDocument.h; sourceTree = "<group>"; };
+		DDD9257F1A3F699B00575E13 /* VXDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VXDocument.m; sourceTree = "<group>"; };
+		DDD925821A3F699B00575E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VXDocument.xib; sourceTree = "<group>"; };
+		DDD925841A3F699B00575E13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DDD925871A3F699B00575E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DDD9259D1A3F69C200575E13 /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
+		DDD925A21A3F6B9400575E13 /* VXPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlayerWindow.h; sourceTree = "<group>"; };
+		DDD925A31A3F6B9400575E13 /* VXPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlayerWindow.m; sourceTree = "<group>"; };
+		DDD925B81A3F85D100575E13 /* VXWindowDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXWindowDragView.h; sourceTree = "<group>"; };
+		DDD925B91A3F85D100575E13 /* VXWindowDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXWindowDragView.m; sourceTree = "<group>"; };
+		DDD925BB1A3F88EE00575E13 /* VXControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXControllerView.h; sourceTree = "<group>"; };
+		DDD925BC1A3F88EE00575E13 /* VXControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXControllerView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDD925711A3F699B00575E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDD9259E1A3F69C200575E13 /* VLCKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD359D231A40795000895C55 /* File Icons */ = {
+			isa = PBXGroup;
+			children = (
+				DD359D241A40798000895C55 /* aiff.icns */,
+				DD359D251A40798000895C55 /* audio.icns */,
+				DD359D261A40798000895C55 /* avi.icns */,
+				DD359D271A40798000895C55 /* flv.icns */,
+				DD359D281A40798000895C55 /* generic.icns */,
+				DD359D291A40798000895C55 /* m4a.icns */,
+				DD359D2A1A40798000895C55 /* m4v.icns */,
+				DD359D2B1A40798000895C55 /* mkv.icns */,
+				DD359D2C1A40798000895C55 /* mov.icns */,
+				DD359D2D1A40798000895C55 /* movie.icns */,
+				DD359D2E1A40798000895C55 /* mp3.icns */,
+				DD359D2F1A40798000895C55 /* mpeg.icns */,
+				DD359D301A40798000895C55 /* ogg.icns */,
+				DD359D311A40798000895C55 /* playlist.icns */,
+				DD359D321A40798000895C55 /* rm.icns */,
+				DD359D331A40798000895C55 /* subtitle.icns */,
+				DD359D341A40798000895C55 /* vob.icns */,
+				DD359D351A40798000895C55 /* wav.icns */,
+				DD359D361A40798000895C55 /* wma.icns */,
+				DD359D371A40798000895C55 /* wmv.icns */,
+			);
+			name = "File Icons";
+			sourceTree = "<group>";
+		};
+		DD359D4C1A40823600895C55 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDD9257E1A3F699B00575E13 /* VXDocument.h */,
+				DDD9257F1A3F699B00575E13 /* VXDocument.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DDD9256B1A3F699B00575E13 = {
+			isa = PBXGroup;
+			children = (
+				DDD9259D1A3F69C200575E13 /* VLCKit.framework */,
+				DDD925761A3F699B00575E13 /* VLCX */,
+				DDD925751A3F699B00575E13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDD925751A3F699B00575E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDD925741A3F699B00575E13 /* VLCX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDD925761A3F699B00575E13 /* VLCX */ = {
+			isa = PBXGroup;
+			children = (
+				DD359D4C1A40823600895C55 /* Controllers */,
+				DDD925A11A3F6B7500575E13 /* Interface */,
+				DDD925791A3F699B00575E13 /* AppDelegate.h */,
+				DDD9257A1A3F699B00575E13 /* AppDelegate.m */,
+				DDD925811A3F699B00575E13 /* VXDocument.xib */,
+				DDD925841A3F699B00575E13 /* Images.xcassets */,
+				DDD925861A3F699B00575E13 /* MainMenu.xib */,
+				DDD925771A3F699B00575E13 /* Supporting Files */,
+			);
+			path = VLCX;
+			sourceTree = "<group>";
+		};
+		DDD925771A3F699B00575E13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD359D231A40795000895C55 /* File Icons */,
+				DDD925781A3F699B00575E13 /* Info.plist */,
+				DDD9257C1A3F699B00575E13 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDD925A11A3F6B7500575E13 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DDD925A21A3F6B9400575E13 /* VXPlayerWindow.h */,
+				DDD925A31A3F6B9400575E13 /* VXPlayerWindow.m */,
+				DDD925B81A3F85D100575E13 /* VXWindowDragView.h */,
+				DDD925B91A3F85D100575E13 /* VXWindowDragView.m */,
+				DDD925BB1A3F88EE00575E13 /* VXControllerView.h */,
+				DDD925BC1A3F88EE00575E13 /* VXControllerView.m */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDD925731A3F699B00575E13 /* VLCX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDD925971A3F699B00575E13 /* Build configuration list for PBXNativeTarget "VLCX" */;
+			buildPhases = (
+				DDD925701A3F699B00575E13 /* Sources */,
+				DDD925711A3F699B00575E13 /* Frameworks */,
+				DD359D4D1A40835A00895C55 /* Set build number */,
+				DDD925721A3F699B00575E13 /* Resources */,
+				DDD925A01A3F69C200575E13 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VLCX;
+			productName = VLCX;
+			productReference = DDD925741A3F699B00575E13 /* VLCX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDD9256C1A3F699B00575E13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Guilherme Rambo";
+				TargetAttributes = {
+					DDD925731A3F699B00575E13 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 8C7439RJLG;
+					};
+				};
+			};
+			buildConfigurationList = DDD9256F1A3F699B00575E13 /* Build configuration list for PBXProject "VLCX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDD9256B1A3F699B00575E13;
+			productRefGroup = DDD925751A3F699B00575E13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDD925731A3F699B00575E13 /* VLCX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDD925721A3F699B00575E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD359D4A1A40798000895C55 /* wma.icns in Resources */,
+				DD359D441A40798000895C55 /* ogg.icns in Resources */,
+				DD359D3E1A40798000895C55 /* m4v.icns in Resources */,
+				DD359D491A40798000895C55 /* wav.icns in Resources */,
+				DDD925831A3F699B00575E13 /* VXDocument.xib in Resources */,
+				DD359D431A40798000895C55 /* mpeg.icns in Resources */,
+				DD359D3B1A40798000895C55 /* flv.icns in Resources */,
+				DD359D411A40798000895C55 /* movie.icns in Resources */,
+				DD359D471A40798000895C55 /* subtitle.icns in Resources */,
+				DDD925851A3F699B00575E13 /* Images.xcassets in Resources */,
+				DD359D391A40798000895C55 /* audio.icns in Resources */,
+				DD359D401A40798000895C55 /* mov.icns in Resources */,
+				DD359D481A40798000895C55 /* vob.icns in Resources */,
+				DD359D3C1A40798000895C55 /* generic.icns in Resources */,
+				DD359D3D1A40798000895C55 /* m4a.icns in Resources */,
+				DD359D4B1A40798000895C55 /* wmv.icns in Resources */,
+				DD359D451A40798000895C55 /* playlist.icns in Resources */,
+				DD359D381A40798000895C55 /* aiff.icns in Resources */,
+				DDD925881A3F699B00575E13 /* MainMenu.xib in Resources */,
+				DD359D3F1A40798000895C55 /* mkv.icns in Resources */,
+				DD359D461A40798000895C55 /* rm.icns in Resources */,
+				DD359D3A1A40798000895C55 /* avi.icns in Resources */,
+				DD359D421A40798000895C55 /* mp3.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD359D4D1A40835A00895C55 /* Set build number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set build number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print VXActualBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\nformattedDate=$(/bin/date +\"%y%m%d\")\nbundleVersion=\"$formattedDate$buildNumber\"\n/usr/libexec/PlistBuddy -c \"Set :VXActualBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDD925701A3F699B00575E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDD925801A3F699B00575E13 /* VXDocument.m in Sources */,
+				DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */,
+				DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */,
+				DDD9257D1A3F699B00575E13 /* main.m in Sources */,
+				DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */,
+				DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DDD925811A3F699B00575E13 /* VXDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDD925821A3F699B00575E13 /* Base */,
+			);
+			name = VXDocument.xib;
+			sourceTree = "<group>";
+		};
+		DDD925861A3F699B00575E13 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDD925871A3F699B00575E13 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDD925951A3F699B00575E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DDD925961A3F699B00575E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DDD925981A3F699B00575E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VLCX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DDD925991A3F699B00575E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VLCX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDD9256F1A3F699B00575E13 /* Build configuration list for PBXProject "VLCX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDD925951A3F699B00575E13 /* Debug */,
+				DDD925961A3F699B00575E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDD925971A3F699B00575E13 /* Build configuration list for PBXNativeTarget "VLCX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDD925981A3F699B00575E13 /* Debug */,
+				DDD925991A3F699B00575E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDD9256C1A3F699B00575E13 /* Project object */;
+}

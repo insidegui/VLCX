@@ -8,9 +8,11 @@
 
 #import "VXPlaybackController.h"
 #import "VXMenuController.h"
+#import "VXPlayerWindow.h"
 
 @interface VXPlaybackController ()
 
+@property (readonly) VXPlayerWindow *playerWindow;
 @property (readonly) VLCMediaPlayer *player;
 
 @property (weak) IBOutlet NSButton *playPauseButton;
@@ -38,6 +40,11 @@
 - (VLCMediaPlayer *)player
 {
     return (VLCMediaPlayer *)self.representedObject;
+}
+
+- (VXPlayerWindow *)playerWindow
+{
+    return (VXPlayerWindow *)self.view.window;
 }
 
 - (void)viewDidLoad {
@@ -108,13 +115,8 @@
         // set the player window's aspectRatio to the aspect ratio of the video
         self.view.window.aspectRatio = self.player.videoSize;
         
-        // if the current size of the player window is not at the correct aspect ratio,
-        // set the size of the player window to half the size of the video
-        //
-        // TODO: improve the sizing method, maybe use the screen size as a factor
-        if (NSWidth(self.view.window.frame)/NSHeight(self.view.window.frame) != self.player.videoSize.width/self.player.videoSize.height) {
-            [self.view.window setFrame:NSMakeRect(self.view.window.frame.origin.x, self.view.window.frame.origin.y, round(self.player.videoSize.width*0.5), round(self.player.videoSize.height*0.5)) display:YES animate:NO];
-        }
+        // size the window to fit the video
+        [self.playerWindow sizeToFitVideoSize:self.player.videoSize animated:YES];
     }
     
     // do an initial update on the time controls

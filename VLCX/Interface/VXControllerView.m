@@ -43,6 +43,7 @@
                 
                 CGFloat maxX = NSWidth(self.window.frame)-NSWidth(self.frame);
                 CGFloat maxY = NSHeight(self.window.frame)-NSHeight(self.frame)-kTitlebarHeight;
+                
                 if (origin.x > maxX) origin.x = maxX;
                 if (origin.x < 0) origin.x = 0;
                 if (origin.y > maxY) origin.y = maxY;

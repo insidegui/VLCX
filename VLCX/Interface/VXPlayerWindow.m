@@ -11,6 +11,7 @@
 @interface VXPlayerWindow ()
 
 @property (readonly) NSVisualEffectView *titlebarView;
+@property (assign) NSSize desiredAspectRatio;
 
 @end
 
@@ -72,6 +73,32 @@
 {
     // [self.contentView superview] is an instance of NSThemeFrame, which has a property called titlebarView
     return [[self.contentView superview] titlebarView];
+}
+
+- (void)sizeToFitVideoSize:(NSSize)videoSize animated:(BOOL)animate
+{
+    CGFloat wRatio, hRatio, resizeRatio;
+    NSRect screenRect = [NSScreen mainScreen].frame;
+    NSSize screenSize = screenRect.size;
+    
+    if (videoSize.width >= videoSize.height) {
+        wRatio = screenSize.width / videoSize.width;
+        hRatio = screenSize.height / videoSize.height;
+    } else {
+        wRatio = screenSize.height / videoSize.width;
+        hRatio = screenSize.width / videoSize.height;
+    }
+    
+    resizeRatio = MIN(wRatio, hRatio);
+    
+    NSSize newSize = NSMakeSize(videoSize.width*resizeRatio, videoSize.height*resizeRatio);
+    
+    CGFloat xPos = screenSize.width/2-newSize.width/2;
+    CGFloat yPos = screenSize.height/2-newSize.height/2;
+    NSRect newRect = NSMakeRect(xPos, yPos, newSize.width, newSize.height);
+    
+    [self setFrame:newRect display:YES animate:animate];
+    [self center];
 }
 
 @end

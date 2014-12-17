@@ -14,5 +14,6 @@
 
 - (void)hideTitlebarAnimated:(BOOL)animated;
 - (void)showTitlebarAnimated:(BOOL)animated;
+- (void)sizeToFitVideoSize:(NSSize)videoSize animated:(BOOL)animate;
 
 @end

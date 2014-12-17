@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="VXDocument">
+        <customObject id="-2" userLabel="File's Owner" customClass="VXVideoDocument">
             <connections>
                 <outlet property="controllerView" destination="TlB-vP-t32" id="Xcx-X4-hJq"/>
                 <outlet property="currentTimeLabel" destination="fgn-Nq-Z4X" id="4p8-NR-Slf"/>

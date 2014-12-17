@@ -7,7 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "VXMediaDocument.h"
 
-@interface VXDocument : NSDocument
+/**
+ VXVideoDocument controls the video player interface
+ */
+@interface VXVideoDocument : VXMediaDocument
 @end
 

@@ -28,11 +28,15 @@
 		DD359D4A1A40798000895C55 /* wma.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D361A40798000895C55 /* wma.icns */; };
 		DD359D4B1A40798000895C55 /* wmv.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D371A40798000895C55 /* wmv.icns */; };
 		DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD359D4F1A4086E700895C55 /* VXPlaybackController.m */; };
+		DD5302CD1A4208A000B49BD8 /* VXAudioDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5302CB1A4208A000B49BD8 /* VXAudioDocument.m */; };
+		DD5302CE1A4208A000B49BD8 /* VXAudioDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5302CC1A4208A000B49BD8 /* VXAudioDocument.xib */; };
+		DD5302D11A420BD800B49BD8 /* VXMediaDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5302D01A420BD800B49BD8 /* VXMediaDocument.m */; };
+		DD5302D41A420DFF00B49BD8 /* VXAudioPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */; };
 		DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBA4BA31A41BF810019926C /* VXMenuController.m */; };
 		DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257A1A3F699B00575E13 /* AppDelegate.m */; };
 		DDD9257D1A3F699B00575E13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257C1A3F699B00575E13 /* main.m */; };
-		DDD925801A3F699B00575E13 /* VXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257F1A3F699B00575E13 /* VXDocument.m */; };
-		DDD925831A3F699B00575E13 /* VXDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD925811A3F699B00575E13 /* VXDocument.xib */; };
+		DDD925801A3F699B00575E13 /* VXVideoDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257F1A3F699B00575E13 /* VXVideoDocument.m */; };
+		DDD925831A3F699B00575E13 /* VXVideoDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD925811A3F699B00575E13 /* VXVideoDocument.xib */; };
 		DDD925851A3F699B00575E13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD925841A3F699B00575E13 /* Images.xcassets */; };
 		DDD925881A3F699B00575E13 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD925861A3F699B00575E13 /* MainMenu.xib */; };
 		DDD9259E1A3F69C200575E13 /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9259D1A3F69C200575E13 /* VLCKit.framework */; };
@@ -80,6 +84,13 @@
 		DD359D371A40798000895C55 /* wmv.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = wmv.icns; path = "Design/deploy/File icons/wmv.icns"; sourceTree = SOURCE_ROOT; };
 		DD359D4E1A4086E700895C55 /* VXPlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlaybackController.h; sourceTree = "<group>"; };
 		DD359D4F1A4086E700895C55 /* VXPlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlaybackController.m; sourceTree = "<group>"; };
+		DD5302CA1A4208A000B49BD8 /* VXAudioDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXAudioDocument.h; sourceTree = "<group>"; };
+		DD5302CB1A4208A000B49BD8 /* VXAudioDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXAudioDocument.m; sourceTree = "<group>"; };
+		DD5302CC1A4208A000B49BD8 /* VXAudioDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VXAudioDocument.xib; sourceTree = "<group>"; };
+		DD5302CF1A420BD800B49BD8 /* VXMediaDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXMediaDocument.h; sourceTree = "<group>"; };
+		DD5302D01A420BD800B49BD8 /* VXMediaDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXMediaDocument.m; sourceTree = "<group>"; };
+		DD5302D21A420DFF00B49BD8 /* VXAudioPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXAudioPlayerWindow.h; sourceTree = "<group>"; };
+		DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXAudioPlayerWindow.m; sourceTree = "<group>"; };
 		DDBA4BA21A41BF810019926C /* VXMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXMenuController.h; sourceTree = "<group>"; };
 		DDBA4BA31A41BF810019926C /* VXMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXMenuController.m; sourceTree = "<group>"; };
 		DDD925741A3F699B00575E13 /* VLCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,9 +98,9 @@
 		DDD925791A3F699B00575E13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDD9257A1A3F699B00575E13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DDD9257C1A3F699B00575E13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DDD9257E1A3F699B00575E13 /* VXDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VXDocument.h; sourceTree = "<group>"; };
-		DDD9257F1A3F699B00575E13 /* VXDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VXDocument.m; sourceTree = "<group>"; };
-		DDD925821A3F699B00575E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VXDocument.xib; sourceTree = "<group>"; };
+		DDD9257E1A3F699B00575E13 /* VXVideoDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VXVideoDocument.h; sourceTree = "<group>"; };
+		DDD9257F1A3F699B00575E13 /* VXVideoDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VXVideoDocument.m; sourceTree = "<group>"; };
+		DDD925821A3F699B00575E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VXVideoDocument.xib; sourceTree = "<group>"; };
 		DDD925841A3F699B00575E13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DDD925871A3F699B00575E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DDD9259D1A3F69C200575E13 /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
@@ -145,14 +156,28 @@
 		DD359D4C1A40823600895C55 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDD9257E1A3F699B00575E13 /* VXDocument.h */,
-				DDD9257F1A3F699B00575E13 /* VXDocument.m */,
+				DD5302D51A42116600B49BD8 /* Document Types */,
 				DD359D4E1A4086E700895C55 /* VXPlaybackController.h */,
 				DD359D4F1A4086E700895C55 /* VXPlaybackController.m */,
 				DDBA4BA21A41BF810019926C /* VXMenuController.h */,
 				DDBA4BA31A41BF810019926C /* VXMenuController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DD5302D51A42116600B49BD8 /* Document Types */ = {
+			isa = PBXGroup;
+			children = (
+				DD5302CA1A4208A000B49BD8 /* VXAudioDocument.h */,
+				DD5302CB1A4208A000B49BD8 /* VXAudioDocument.m */,
+				DD5302CC1A4208A000B49BD8 /* VXAudioDocument.xib */,
+				DD5302CF1A420BD800B49BD8 /* VXMediaDocument.h */,
+				DD5302D01A420BD800B49BD8 /* VXMediaDocument.m */,
+				DDD9257E1A3F699B00575E13 /* VXVideoDocument.h */,
+				DDD9257F1A3F699B00575E13 /* VXVideoDocument.m */,
+				DDD925811A3F699B00575E13 /* VXVideoDocument.xib */,
+			);
+			name = "Document Types";
 			sourceTree = "<group>";
 		};
 		DDD9256B1A3F699B00575E13 = {
@@ -179,7 +204,6 @@
 				DDD925A11A3F6B7500575E13 /* Interface */,
 				DDD925791A3F699B00575E13 /* AppDelegate.h */,
 				DDD9257A1A3F699B00575E13 /* AppDelegate.m */,
-				DDD925811A3F699B00575E13 /* VXDocument.xib */,
 				DDD925841A3F699B00575E13 /* Images.xcassets */,
 				DDD925861A3F699B00575E13 /* MainMenu.xib */,
 				DDD925771A3F699B00575E13 /* Supporting Files */,
@@ -208,6 +232,8 @@
 				DDD925BC1A3F88EE00575E13 /* VXControllerView.m */,
 				DDECDD211A41E5C2002CAAA8 /* VXTimeSliderCell.h */,
 				DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */,
+				DD5302D21A420DFF00B49BD8 /* VXAudioPlayerWindow.h */,
+				DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -275,8 +301,9 @@
 				DD359D4A1A40798000895C55 /* wma.icns in Resources */,
 				DD359D441A40798000895C55 /* ogg.icns in Resources */,
 				DD359D3E1A40798000895C55 /* m4v.icns in Resources */,
+				DD5302CE1A4208A000B49BD8 /* VXAudioDocument.xib in Resources */,
 				DD359D491A40798000895C55 /* wav.icns in Resources */,
-				DDD925831A3F699B00575E13 /* VXDocument.xib in Resources */,
+				DDD925831A3F699B00575E13 /* VXVideoDocument.xib in Resources */,
 				DD359D431A40798000895C55 /* mpeg.icns in Resources */,
 				DD359D3B1A40798000895C55 /* flv.icns in Resources */,
 				DD359D411A40798000895C55 /* movie.icns in Resources */,
@@ -322,7 +349,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDD925801A3F699B00575E13 /* VXDocument.m in Sources */,
+				DD5302D11A420BD800B49BD8 /* VXMediaDocument.m in Sources */,
+				DDD925801A3F699B00575E13 /* VXVideoDocument.m in Sources */,
 				DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */,
 				DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */,
 				DDD9257D1A3F699B00575E13 /* main.m in Sources */,
@@ -330,19 +358,22 @@
 				DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */,
 				DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */,
 				DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */,
+				DD5302D41A420DFF00B49BD8 /* VXAudioPlayerWindow.m in Sources */,
 				DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */,
+				DD5302CD1A4208A000B49BD8 /* VXAudioDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DDD925811A3F699B00575E13 /* VXDocument.xib */ = {
+		DDD925811A3F699B00575E13 /* VXVideoDocument.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DDD925821A3F699B00575E13 /* Base */,
 			);
-			name = VXDocument.xib;
+			name = VXVideoDocument.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		DDD925861A3F699B00575E13 /* MainMenu.xib */ = {

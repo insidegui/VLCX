@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="VXAudioDocument">
+            <connections>
+                <outlet property="playbackController" destination="QNr-8v-acq" id="7ii-1u-PvX"/>
+                <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="documentWindow" id="xOd-HO-29H" userLabel="Window" customClass="VXAudioPlayerWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="788" y="435" width="440" height="144"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <value key="minSize" type="size" width="94" height="134"/>
+            <value key="maxSize" type="size" width="5000" height="144"/>
+            <view key="contentView" wantsLayer="YES" id="gIp-Ho-8D9">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="RZi-AP-Ve8">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="144"/>
+                        <subviews>
+                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-Th-Kfl" userLabel="Time Slider">
+                                <rect key="frame" x="65" y="89" width="312" height="21"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="og4-uP-Koj" customClass="VXTimeSliderCell"/>
+                                <connections>
+                                    <action selector="timeSliderAction:" target="QNr-8v-acq" id="B1V-5o-1rw"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-y0-NbV">
+                                <rect key="frame" x="379" y="93" width="50" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="00:00:00" id="Y0Z-oY-Ifa">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eG4-LN-fwB">
+                                <rect key="frame" x="11" y="93" width="50" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="00:00:00" id="5fP-tx-uA7">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="2Ys-Ot-37D">
+                                <rect key="frame" x="405" y="21" width="21" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="3Bf-nd-BbO"/>
+                                    <constraint firstAttribute="width" constant="21" id="mN0-Hx-PLn"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="volumeFull" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="8ot-U4-77p">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="volumeMaxAction:" target="QNr-8v-acq" id="fbL-nC-jY6"/>
+                                </connections>
+                            </button>
+                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wXt-QW-mX3" userLabel="Volume Slider">
+                                <rect key="frame" x="30" y="18" width="369" height="21"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="200" doubleValue="100" tickMarkPosition="above" sliderType="linear" id="Zx5-58-qGn"/>
+                                <connections>
+                                    <action selector="volumeSliderAction:" target="QNr-8v-acq" id="4Is-e2-Z1A"/>
+                                </connections>
+                            </slider>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Hch-fv-bYP">
+                                <rect key="frame" x="11" y="21" width="13" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="7Ei-dV-ZG1"/>
+                                    <constraint firstAttribute="width" constant="13" id="pRX-lT-whi"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="volumeLow" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Ph2-cp-ML8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="volumeMinAction:" target="QNr-8v-acq" id="sQ8-Hm-70R"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" alphaValue="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="WaE-og-y5t">
+                                <rect key="frame" x="209" y="51" width="22" height="32"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="play" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="ZQh-bh-n53">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+IA
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="playOrPause:" target="-2" id="r6N-fH-KQp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wXt-QW-mX3" secondAttribute="bottom" constant="20" id="12P-rh-ntS"/>
+                            <constraint firstItem="eG4-LN-fwB" firstAttribute="leading" secondItem="RZi-AP-Ve8" secondAttribute="leading" constant="13" id="1zk-rB-Gp1"/>
+                            <constraint firstItem="dRy-y0-NbV" firstAttribute="top" secondItem="RZi-AP-Ve8" secondAttribute="top" constant="37" id="2ou-W2-5iy"/>
+                            <constraint firstItem="WaE-og-y5t" firstAttribute="top" secondItem="8nI-Th-Kfl" secondAttribute="bottom" constant="8" id="9nd-vt-Yfv"/>
+                            <constraint firstAttribute="trailing" secondItem="dRy-y0-NbV" secondAttribute="trailing" constant="13" id="Gew-ZX-RA0"/>
+                            <constraint firstItem="2Ys-Ot-37D" firstAttribute="leading" secondItem="wXt-QW-mX3" secondAttribute="trailing" constant="8" id="HUL-Kp-T4a"/>
+                            <constraint firstItem="eG4-LN-fwB" firstAttribute="top" secondItem="RZi-AP-Ve8" secondAttribute="top" constant="37" id="IvJ-4N-tgU"/>
+                            <constraint firstItem="dRy-y0-NbV" firstAttribute="leading" secondItem="8nI-Th-Kfl" secondAttribute="trailing" constant="6" id="JWX-WE-R0C"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ys-Ot-37D" secondAttribute="bottom" constant="21" id="K7b-Y8-YFJ"/>
+                            <constraint firstAttribute="centerX" secondItem="WaE-og-y5t" secondAttribute="centerX" id="Oqf-g6-RGX"/>
+                            <constraint firstItem="wXt-QW-mX3" firstAttribute="leading" secondItem="Hch-fv-bYP" secondAttribute="trailing" constant="8" id="PN1-wJ-BVE"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ys-Ot-37D" secondAttribute="trailing" constant="14" id="RV1-Kz-UXg"/>
+                            <constraint firstItem="Hch-fv-bYP" firstAttribute="leading" secondItem="RZi-AP-Ve8" secondAttribute="leading" constant="11" id="UaE-NF-Pc5"/>
+                            <constraint firstAttribute="bottom" secondItem="Hch-fv-bYP" secondAttribute="bottom" constant="21" id="jtJ-Wz-m7g"/>
+                            <constraint firstItem="8nI-Th-Kfl" firstAttribute="top" secondItem="RZi-AP-Ve8" secondAttribute="top" constant="36" id="tCf-hC-YCb"/>
+                            <constraint firstItem="8nI-Th-Kfl" firstAttribute="leading" secondItem="eG4-LN-fwB" secondAttribute="trailing" constant="8" id="xW7-Xv-fOn"/>
+                        </constraints>
+                    </visualEffectView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RZi-AP-Ve8" firstAttribute="leading" secondItem="gIp-Ho-8D9" secondAttribute="leading" id="EYR-Dx-gQN"/>
+                    <constraint firstAttribute="bottom" secondItem="RZi-AP-Ve8" secondAttribute="bottom" id="X7h-Gd-WKd"/>
+                    <constraint firstAttribute="trailing" secondItem="RZi-AP-Ve8" secondAttribute="trailing" id="d0w-3u-dIO"/>
+                    <constraint firstItem="RZi-AP-Ve8" firstAttribute="top" secondItem="gIp-Ho-8D9" secondAttribute="top" id="zmC-LV-RbL"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-x8E"/>
+            </connections>
+            <point key="canvasLocation" x="466" y="305"/>
+        </window>
+        <viewController id="QNr-8v-acq" customClass="VXPlaybackController">
+            <connections>
+                <outlet property="currentTimeLabel" destination="eG4-LN-fwB" id="mvw-pg-dT8"/>
+                <outlet property="playPauseButton" destination="WaE-og-y5t" id="3Yk-Hv-UfZ"/>
+                <outlet property="timeLeftLabel" destination="dRy-y0-NbV" id="hoX-zf-UUM"/>
+                <outlet property="timeSlider" destination="8nI-Th-Kfl" id="rBo-D9-hUg"/>
+                <outlet property="view" destination="RZi-AP-Ve8" id="9SS-o3-YjT"/>
+                <outlet property="volumeMaxButton" destination="2Ys-Ot-37D" id="Dad-3n-p9h"/>
+                <outlet property="volumeMinButton" destination="Hch-fv-bYP" id="qVF-Xc-A2b"/>
+                <outlet property="volumeSlider" destination="wXt-QW-mX3" id="cpN-ha-ZNu"/>
+            </connections>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="play" width="22" height="22"/>
+        <image name="volumeFull" width="21" height="15"/>
+        <image name="volumeLow" width="13" height="12"/>
+    </resources>
+</document>

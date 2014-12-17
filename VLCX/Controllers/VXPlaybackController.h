@@ -14,5 +14,6 @@
 
 - (void)volumeUp;
 - (void)volumeDown;
+- (IBAction)playOrPause:(id)sender;
 
 @end

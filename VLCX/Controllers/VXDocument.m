@@ -87,6 +87,11 @@
     [super close];
 }
 
+- (IBAction)playOrPause:(id)sender
+{
+    [self.playbackController playOrPause:sender];
+}
+
 #pragma mark Volume Controls
 
 /*

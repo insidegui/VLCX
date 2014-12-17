@@ -332,6 +332,19 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Control" id="CHR-Pc-htt">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Control" id="L9d-Ye-ULJ">
+                        <items>
+                            <menuItem title="Play/pause" keyEquivalent=" " id="1zh-i9-RHK">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="playOrPause:" target="-1" id="ogT-Vj-0Lf"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem title="Format" id="jxT-CU-nIS">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Format" id="GEO-Iw-cKr">

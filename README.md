@@ -6,8 +6,8 @@ VLCX is basically QuickTime Player, but with libvlc as a backend. The interface 
 
 ## Using
 
-If you just want to use VLCX, [download the latest release here](https://github.com/insidegui/VLCX/blob/master/releases/VLCX_latest.zip?raw=true). The release available on GitHub is not codesigned, so you will have to allow It to run by going to `System Preferences > Security & Privacy > Allow apps downloaded from:` and selecting `Anywhere`.
+If you just want to use VLCX, [download the latest release here](https://github.com/insidegui/VLCX/blob/master/releases/VLCX_latest.zip?raw=true).
 
-## Dependencies
+## Building
 
-VLCX requires a copy of VLCKit.framework, you can get It [here](https://wiki.videolan.org/VLCKit/).
+To build VLCX from the source, get a copy of VLCKit.framework [here](https://wiki.videolan.org/VLCKit/).

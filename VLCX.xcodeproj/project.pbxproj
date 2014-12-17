@@ -40,6 +40,7 @@
 		DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925A31A3F6B9400575E13 /* VXPlayerWindow.m */; };
 		DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925B91A3F85D100575E13 /* VXWindowDragView.m */; };
 		DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925BC1A3F88EE00575E13 /* VXControllerView.m */; };
+		DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -98,6 +99,8 @@
 		DDD925B91A3F85D100575E13 /* VXWindowDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXWindowDragView.m; sourceTree = "<group>"; };
 		DDD925BB1A3F88EE00575E13 /* VXControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXControllerView.h; sourceTree = "<group>"; };
 		DDD925BC1A3F88EE00575E13 /* VXControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXControllerView.m; sourceTree = "<group>"; };
+		DDECDD211A41E5C2002CAAA8 /* VXTimeSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXTimeSliderCell.h; sourceTree = "<group>"; };
+		DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXTimeSliderCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,8 @@
 				DDD925B91A3F85D100575E13 /* VXWindowDragView.m */,
 				DDD925BB1A3F88EE00575E13 /* VXControllerView.h */,
 				DDD925BC1A3F88EE00575E13 /* VXControllerView.m */,
+				DDECDD211A41E5C2002CAAA8 /* VXTimeSliderCell.h */,
+				DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */,
 				DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */,
 				DDD9257D1A3F699B00575E13 /* main.m in Sources */,
+				DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */,
 				DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */,
 				DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */,
 				DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */,

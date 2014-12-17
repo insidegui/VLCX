@@ -47,7 +47,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="308" id="d5h-tB-VNJ"/>
                                         </constraints>
-                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="fzx-Qp-90Q"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="fzx-Qp-90Q" customClass="VXTimeSliderCell"/>
                                         <connections>
                                             <action selector="timeSliderAction:" target="D9o-lx-HwS" id="7nG-Im-BgU"/>
                                         </connections>

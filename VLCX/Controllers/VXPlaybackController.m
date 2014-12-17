@@ -103,10 +103,11 @@
 }
 
 - (IBAction)timeSliderAction:(id)sender {
-    self.player.time = [VLCTime timeWithInt:self.timeSlider.intValue];
+    VLCTime *newTime = [VLCTime timeWithInt:self.timeSlider.intValue];
+    self.player.time = newTime;
     
     // wen the time is set manually, playerTimeChanged: is not called, so we have to call updateTimeLabels here
-    [self updateTimeLabels];
+    [self updateTimeLabelsWithTime:newTime];
 }
 
 - (void)mediaDidFinishParsing:(VLCMedia *)aMedia
@@ -165,8 +166,13 @@
 
 - (void)updateTimeLabels
 {
-    self.currentTimeLabel.stringValue = self.player.time.stringValue;
-    self.timeLeftLabel.stringValue = self.player.remainingTime.stringValue;
+    [self updateTimeLabelsWithTime:self.player.time];
+}
+
+- (void)updateTimeLabelsWithTime:(VLCTime *)time
+{
+    self.currentTimeLabel.stringValue = time.stringValue;
+    self.timeLeftLabel.stringValue = [NSString stringWithFormat:@"-%@", [VLCTime timeWithInt:(self.player.media.length.intValue-time.intValue)].stringValue];
 }
 
 #pragma mark Playback States

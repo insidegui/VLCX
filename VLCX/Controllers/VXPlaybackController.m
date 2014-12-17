@@ -7,6 +7,7 @@
 //
 
 #import "VXPlaybackController.h"
+#import "VXMenuController.h"
 
 @interface VXPlaybackController ()
 
@@ -24,10 +25,8 @@
 @property (weak) IBOutlet NSTextField *timeLeftLabel;
 @property (weak) IBOutlet NSSlider *timeSlider;
 
-// audio and subtitle menus
-@property (strong) IBOutlet NSMenu *audioOptionsMenu;
-@property (strong) IBOutlet NSMenu *audioTracksMenu;
-@property (weak) IBOutlet NSMenu *subtitleTracksMenu;
+// menu controller
+@property (weak) IBOutlet VXMenuController *menuController;
 
 @end
 
@@ -122,8 +121,7 @@
     [self updateTimeControls];
     
     // populate the audio and subtitle menus
-    [self setupAudioTracksMenu];
-    [self setupSubtitleTracksMenu];
+    self.menuController.player = self.player;
 }
 
 - (void)playerStateChanged:(NSNotification *)aNotification
@@ -167,65 +165,6 @@
 {
     self.currentTimeLabel.stringValue = self.player.time.stringValue;
     self.timeLeftLabel.stringValue = self.player.remainingTime.stringValue;
-}
-
-- (void)setupAudioTracksMenu
-{
-    if (self.player.audioTrackNames.count <= 0) return;
-    
-    [self.audioTracksMenu removeAllItems];
-    
-    for (NSString *trackName in self.player.audioTrackNames) {
-        // create an item with the track name as it's title
-        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:trackName action:@selector(audioTrackMenuItemAction:) keyEquivalent:@""];
-        // the tag will be the index of the track in the audioTrackNames array
-        item.tag = [self.player.audioTrackNames indexOfObject:trackName];
-        
-        // if the current audio track is this one, tick the item :)
-        if (item.tag == [self.player.audioTrackIndexes indexOfObject:@(self.player.currentAudioTrackIndex)]) [item setState:NSOnState];
-        
-        [self.audioTracksMenu addItem:item];
-    }
-}
-
-- (void)setupSubtitleTracksMenu
-{
-    if (self.player.videoSubTitlesNames.count <= 0) return;
-    
-    [self.subtitleTracksMenu removeAllItems];
-    
-    for (NSString *trackName in self.player.videoSubTitlesNames) {
-        // ^^^^^^ same thing as above (setupAudioTracksMenu) ^^^^^^
-        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:trackName action:@selector(subtitlesTrackMenuItemAction:) keyEquivalent:@""];
-        item.tag = [self.player.videoSubTitlesNames indexOfObject:trackName];
-        if (item.tag == [self.player.videoSubTitlesIndexes indexOfObject:@(self.player.currentVideoSubTitleIndex)]) [item setState:NSOnState];
-        
-        [self.subtitleTracksMenu addItem:item];
-    }
-}
-
-- (void)audioTrackMenuItemAction:(id)sender
-{
-    // first untick all menu items
-    for (NSMenuItem *item in self.audioTracksMenu.itemArray) {
-        [item setState:NSOffState];
-    }
-    
-    // now tick the current track menu item
-    self.player.currentAudioTrackIndex = [self.player.audioTrackIndexes[[sender tag]] integerValue];
-    [sender setState:NSOnState];
-}
-
-- (void)subtitlesTrackMenuItemAction:(id)sender
-{
-    // first untick all menu items
-    for (NSMenuItem *item in self.subtitleTracksMenu.itemArray) {
-        [item setState:NSOffState];
-    }
-    
-    // now tick the current track menu item
-    self.player.currentVideoSubTitleIndex = [self.player.videoSubTitlesIndexes[[sender tag]] integerValue];
-    [sender setState:NSOnState];
 }
 
 #pragma mark Playback States

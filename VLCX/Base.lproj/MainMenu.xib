@@ -309,7 +309,7 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Audio" id="4rz-eB-oz2">
+                <menuItem title="Audio" tag="11" id="4rz-eB-oz2">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Audio" id="owp-Pz-dtV">
                         <items>
@@ -328,6 +328,27 @@
                                 <connections>
                                     <action selector="muteAction:" target="-1" id="sTJ-As-64k"/>
                                 </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="9wo-fS-bjk"/>
+                            <menuItem title="Audio Tracks" tag="22" id="uxe-2Z-Skl">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Audio Tracks" id="VUz-Pe-EcE">
+                                    <items>
+                                        <menuItem title="None" id="Dox-yD-ddq">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Subtitles" tag="33" id="Bh1-7K-205">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Subtitles" id="Dlq-JT-iYG">
+                                    <items>
+                                        <menuItem title="None" id="zxH-f0-XKR">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
                             </menuItem>
                         </items>
                     </menu>

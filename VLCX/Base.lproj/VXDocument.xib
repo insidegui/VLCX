@@ -6,14 +6,11 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="VXDocument">
             <connections>
-                <outlet property="audioOptionsMenu" destination="yQo-hD-0ca" id="aQb-aZ-jqx"/>
-                <outlet property="audioTracksMenu" destination="CnZ-lk-SZE" id="g7x-qS-Znp"/>
                 <outlet property="controllerView" destination="TlB-vP-t32" id="Xcx-X4-hJq"/>
                 <outlet property="currentTimeLabel" destination="fgn-Nq-Z4X" id="4p8-NR-Slf"/>
                 <outlet property="dragView" destination="pda-6Q-zmn" id="llc-2L-aHy"/>
                 <outlet property="playPauseButton" destination="gUt-UA-mvL" id="8DD-1O-QIn"/>
                 <outlet property="playbackController" destination="D9o-lx-HwS" id="ccn-xJ-ySx"/>
-                <outlet property="subtitleTracksMenu" destination="yXd-ZP-qzt" id="rbR-wX-ygq"/>
                 <outlet property="timeLeftLabel" destination="TVy-Vu-IVB" id="oHR-Hl-ark"/>
                 <outlet property="timeSlider" destination="aTo-rq-maJ" id="DBx-Uq-QWz"/>
                 <outlet property="videoView" destination="LEa-r0-YBo" id="wPn-xa-nBG"/>
@@ -176,11 +173,9 @@ IA
         </menu>
         <viewController id="D9o-lx-HwS" customClass="VXPlaybackController">
             <connections>
-                <outlet property="audioOptionsMenu" destination="yQo-hD-0ca" id="ffU-y9-Omm"/>
-                <outlet property="audioTracksMenu" destination="CnZ-lk-SZE" id="AEA-Di-JtI"/>
                 <outlet property="currentTimeLabel" destination="fgn-Nq-Z4X" id="2IJ-IV-EqA"/>
+                <outlet property="menuController" destination="fqo-qs-WnO" id="X6T-90-ble"/>
                 <outlet property="playPauseButton" destination="gUt-UA-mvL" id="Pjl-0v-Ncm"/>
-                <outlet property="subtitleTracksMenu" destination="yXd-ZP-qzt" id="PJ1-8I-IZS"/>
                 <outlet property="timeLeftLabel" destination="TVy-Vu-IVB" id="JrK-t3-v4w"/>
                 <outlet property="timeSlider" destination="aTo-rq-maJ" id="Unq-hJ-MoP"/>
                 <outlet property="view" destination="TlB-vP-t32" id="Ha0-uj-0Ps"/>
@@ -189,6 +184,13 @@ IA
                 <outlet property="volumeSlider" destination="C6W-c4-DTe" id="x6K-eA-TIQ"/>
             </connections>
         </viewController>
+        <customObject id="fqo-qs-WnO" customClass="VXMenuController">
+            <connections>
+                <outlet property="audioOptionsMenu" destination="yQo-hD-0ca" id="uWL-aa-nuF"/>
+                <outlet property="audioTracksMenu" destination="CnZ-lk-SZE" id="lIF-SX-5jb"/>
+                <outlet property="subtitleTracksMenu" destination="yXd-ZP-qzt" id="fhK-xq-Crb"/>
+            </connections>
+        </customObject>
     </objects>
     <resources>
         <image name="play" width="22" height="22"/>

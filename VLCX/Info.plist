@@ -1465,7 +1465,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>141218188</string>
+	<string>141218189</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1477,6 +1477,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>VXActualBundleVersion</key>
-	<string>188</string>
+	<string>189</string>
 </dict>
 </plist>

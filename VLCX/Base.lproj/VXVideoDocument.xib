@@ -7,16 +7,9 @@
         <customObject id="-2" userLabel="File's Owner" customClass="VXVideoDocument">
             <connections>
                 <outlet property="controllerView" destination="TlB-vP-t32" id="Xcx-X4-hJq"/>
-                <outlet property="currentTimeLabel" destination="fgn-Nq-Z4X" id="4p8-NR-Slf"/>
                 <outlet property="dragView" destination="pda-6Q-zmn" id="llc-2L-aHy"/>
-                <outlet property="playPauseButton" destination="gUt-UA-mvL" id="8DD-1O-QIn"/>
                 <outlet property="playbackController" destination="D9o-lx-HwS" id="ccn-xJ-ySx"/>
-                <outlet property="timeLeftLabel" destination="TVy-Vu-IVB" id="oHR-Hl-ark"/>
-                <outlet property="timeSlider" destination="aTo-rq-maJ" id="DBx-Uq-QWz"/>
                 <outlet property="videoView" destination="LEa-r0-YBo" id="wPn-xa-nBG"/>
-                <outlet property="volumeMaxButton" destination="jpZ-xs-OiW" id="2z1-Pf-e0Y"/>
-                <outlet property="volumeMinButton" destination="cte-wt-5vI" id="7q1-g1-AOG"/>
-                <outlet property="volumeSlider" destination="C6W-c4-DTe" id="c5m-4I-edg"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
         </customObject>

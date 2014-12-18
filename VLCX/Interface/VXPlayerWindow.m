@@ -27,8 +27,7 @@
 {
     if (!(self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag])) return nil;
 
-    // hide the title and make the contentView the full size of the window
-    self.titleVisibility = NSWindowTitleHidden;
+    // make the contentView the full size of the window
     self.styleMask |= NSFullSizeContentViewWindowMask;
     
     // make our titlebar dark

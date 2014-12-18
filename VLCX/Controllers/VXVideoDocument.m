@@ -83,4 +83,20 @@
     }
 }
 
+#pragma mark Video-specific actions
+
+- (IBAction)snapshot:(id)sender
+{
+    NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, YES);
+    NSString *filename = [NSString stringWithFormat:@"vlcxsnap_%.0f.png", [NSDate date].timeIntervalSince1970];
+    NSString *snapshotURL = [NSString pathWithComponents:@[searchPaths[0], filename]];
+    
+    [self.player saveVideoSnapshotAt:snapshotURL withWidth:self.player.videoSize.width andHeight:self.player.videoSize.height];
+}
+
+- (IBAction)toggleFullscreen:(id)sender
+{
+    [self.windowForSheet toggleFullScreen:sender];
+}
+
 @end

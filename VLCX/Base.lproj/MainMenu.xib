@@ -142,7 +142,8 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Find" id="1b7-l0-nxx">
                                     <items>
-                                        <menuItem title="Find…" tag="1" keyEquivalent="f" id="Xz5-n4-O0W">
+                                        <menuItem title="Find…" tag="1" id="Xz5-n4-O0W">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="performFindPanelAction:" target="-1" id="cD7-Qs-BN4"/>
                                             </connections>
@@ -345,6 +346,35 @@
                                 <menu key="submenu" title="Subtitles" id="Dlq-JT-iYG">
                                     <items>
                                         <menuItem title="None" id="zxH-f0-XKR">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Video" tag="55" id="6lA-EN-diz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Video" id="Phi-qR-wjM">
+                        <items>
+                            <menuItem title="Fullscreen" keyEquivalent="f" id="LlB-JZ-AEf">
+                                <connections>
+                                    <action selector="toggleFullscreen:" target="-1" id="2WW-Hy-OwG"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Snapshot" keyEquivalent="s" id="igw-J9-Yl6">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="snapshot:" target="-1" id="gfS-bz-RXv"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Xcp-vR-Etw"/>
+                            <menuItem title="Video Tracks" tag="66" id="AQx-qY-9du">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Video Tracks" id="hWG-6r-GqP">
+                                    <items>
+                                        <menuItem title="None" id="yra-zp-VnE">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>

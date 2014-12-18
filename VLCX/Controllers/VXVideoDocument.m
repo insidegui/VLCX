@@ -19,6 +19,9 @@
 @end
 
 @implementation VXVideoDocument
+{
+    BOOL _postponedSetMedia;
+}
 
 - (instancetype)init {
     if (!(self = [super init])) return nil;
@@ -42,14 +45,42 @@
     // the playbackController will get the media delegate callbacks
     self.media.delegate = self.playbackController;
     
-    // at this point we already have a VLCMedia object initialized because readFromURL: is called before windowControllerDidLoadNib:
-    [self.player setMedia:self.media];
+    if (!self.media) {
+        // we will set the media later
+        _postponedSetMedia = YES;
+    } else {
+        // at this point we already have a VLCMedia object initialized because readFromURL: is called before windowControllerDidLoadNib:
+        [self.player setMedia:self.media];
+        
+        // start playing after a short delay,
+        // this short delay ensures there are no audio glitches when starting the playback
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.player play];
+        });
+    }
+}
+
+- (void)setInternetURL:(NSURL *)internetURL
+{
+    [super setInternetURL:internetURL];
     
-    // start playing after a short delay,
-    // this short delay ensures there are no audio glitches when starting the playback
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-       [self.player play];
-    });
+    self.displayName = self.internetURL.lastPathComponent;
+    self.media = [VLCMedia mediaWithURL:self.internetURL];
+}
+
+- (void)setMedia:(VLCMedia *)media
+{
+    [super setMedia:media];
+    
+    if (_postponedSetMedia) {
+        _postponedSetMedia = NO;
+        
+        [self.player setMedia:self.media];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.player play];
+        });
+    }
 }
 
 @end

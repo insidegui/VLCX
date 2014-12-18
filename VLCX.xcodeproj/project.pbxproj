@@ -32,6 +32,7 @@
 		DD5302CE1A4208A000B49BD8 /* VXAudioDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5302CC1A4208A000B49BD8 /* VXAudioDocument.xib */; };
 		DD5302D11A420BD800B49BD8 /* VXMediaDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5302D01A420BD800B49BD8 /* VXMediaDocument.m */; };
 		DD5302D41A420DFF00B49BD8 /* VXAudioPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */; };
+		DD5874201A42843D000C6677 /* NSDocumentController+VLCXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD58741F1A42843D000C6677 /* NSDocumentController+VLCXAdditions.m */; };
 		DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBA4BA31A41BF810019926C /* VXMenuController.m */; };
 		DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257A1A3F699B00575E13 /* AppDelegate.m */; };
 		DDD9257D1A3F699B00575E13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257C1A3F699B00575E13 /* main.m */; };
@@ -91,6 +92,8 @@
 		DD5302D01A420BD800B49BD8 /* VXMediaDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXMediaDocument.m; sourceTree = "<group>"; };
 		DD5302D21A420DFF00B49BD8 /* VXAudioPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXAudioPlayerWindow.h; sourceTree = "<group>"; };
 		DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXAudioPlayerWindow.m; sourceTree = "<group>"; };
+		DD58741E1A42843D000C6677 /* NSDocumentController+VLCXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocumentController+VLCXAdditions.h"; sourceTree = "<group>"; };
+		DD58741F1A42843D000C6677 /* NSDocumentController+VLCXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocumentController+VLCXAdditions.m"; sourceTree = "<group>"; };
 		DDBA4BA21A41BF810019926C /* VXMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXMenuController.h; sourceTree = "<group>"; };
 		DDBA4BA31A41BF810019926C /* VXMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXMenuController.m; sourceTree = "<group>"; };
 		DDD925741A3F699B00575E13 /* VLCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +183,15 @@
 			name = "Document Types";
 			sourceTree = "<group>";
 		};
+		DD58741D1A4283D6000C6677 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DD58741E1A42843D000C6677 /* NSDocumentController+VLCXAdditions.h */,
+				DD58741F1A42843D000C6677 /* NSDocumentController+VLCXAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		DDD9256B1A3F699B00575E13 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +212,7 @@
 		DDD925761A3F699B00575E13 /* VLCX */ = {
 			isa = PBXGroup;
 			children = (
+				DD58741D1A4283D6000C6677 /* Categories */,
 				DD359D4C1A40823600895C55 /* Controllers */,
 				DDD925A11A3F6B7500575E13 /* Interface */,
 				DDD925791A3F699B00575E13 /* AppDelegate.h */,
@@ -349,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD5874201A42843D000C6677 /* NSDocumentController+VLCXAdditions.m in Sources */,
 				DD5302D11A420BD800B49BD8 /* VXMediaDocument.m in Sources */,
 				DDD925801A3F699B00575E13 /* VXVideoDocument.m in Sources */,
 				DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */,

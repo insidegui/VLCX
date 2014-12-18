@@ -1450,8 +1450,22 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>HTTP</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>http</string>
+				<string>https</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>141217155</string>
+	<string>141218185</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1463,6 +1477,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>VXActualBundleVersion</key>
-	<string>155</string>
+	<string>185</string>
 </dict>
 </plist>

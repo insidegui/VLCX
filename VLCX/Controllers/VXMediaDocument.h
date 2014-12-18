@@ -21,4 +21,9 @@
 
 @property (strong) IBOutlet VXPlaybackController *playbackController;
 
+// the URL, if this document represents an internet document
+@property (nonatomic, copy) NSURL *internetURL;
+
+- (instancetype)initWithType:(NSString *)type internetURL:(NSURL *)anURL;
+
 @end

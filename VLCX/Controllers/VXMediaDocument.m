@@ -10,6 +10,25 @@
 
 @implementation VXMediaDocument
 
+- (instancetype)initWithType:(NSString *)type internetURL:(NSURL *)anURL
+{
+    if (!(self = [super initWithType:type error:nil])) return nil;
+    
+    self.internetURL = anURL;
+    
+    return self;
+}
+
+- (void)windowControllerDidLoadNib:(NSWindowController *)windowController
+{
+    [super windowControllerDidLoadNib:windowController];
+    
+    if (self.internetURL) {
+        self.displayName = self.internetURL.lastPathComponent;
+        self.media = [VLCMedia mediaWithURL:self.internetURL];
+    }
+}
+
 - (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
 {
     // initialize a VLCMedia object with the file opened
@@ -63,6 +82,20 @@
         [sender setState:NSOnState];
         [self.player.audio setMute:YES];
     }
+}
+
+#pragma mark State Restoration
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.internetURL forKey:@"internetURL"];
+    [super encodeRestorableStateWithCoder:coder];
+}
+
+- (void)restoreStateWithCoder:(NSCoder *)coder
+{
+    [super restoreStateWithCoder:coder];
+    self.internetURL = [coder decodeObjectForKey:@"internetURL"];
 }
 
 @end

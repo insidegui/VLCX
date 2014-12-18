@@ -11,7 +11,6 @@
 @interface VXPlayerWindow ()
 
 @property (readonly) NSVisualEffectView *titlebarView;
-@property (assign) NSSize desiredAspectRatio;
 
 @end
 

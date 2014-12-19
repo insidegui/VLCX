@@ -32,6 +32,9 @@
     // make our titlebar dark
     self.titlebarView.material = NSVisualEffectMaterialDark;
     
+    // the titlebar vibrancy effect should always be active
+    self.titlebarView.state = NSVisualEffectStateActive;
+    
     // start with the titlebar hidden
     [self hideTitlebarAnimated:NO];
     

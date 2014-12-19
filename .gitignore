@@ -19,4 +19,6 @@ VLCKit.framework
 VLCKit.framework/*
 Crashlytics.framework
 Crashlytics.framework/*
+Sparkle.framework
+Sparkle.framework/*
 Config.h

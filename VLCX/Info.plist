@@ -1465,7 +1465,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>141219241</string>
+	<string>141219244</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1476,7 +1476,13 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>http://appverse.guilhermerambo.me/vlcx/appcast.xml</string>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
 	<key>VXActualBundleVersion</key>
-	<string>241</string>
+	<string>244</string>
 </dict>
 </plist>

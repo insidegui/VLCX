@@ -2,9 +2,19 @@
 
 VLCX is basically QuickTime Player, but with libvlc as a backend. The interface aims to be pretty much identical to QuickTime's, but there's still a lot to do to get there.
 
-![screenshot](https://raw.githubusercontent.com/insidegui/VLCX/master/screenshot.png)
+## Screenshots
 
-![screenshot2](https://raw.githubusercontent.com/insidegui/VLCX/master/screenshot2.png)
+### Playing a Video
+
+![screenshot](https://raw.githubusercontent.com/insidegui/VLCX/master/releases/screenshots/screenshot.png)
+
+### Playing a Song
+
+![screenshot2](https://raw.githubusercontent.com/insidegui/VLCX/master/releases/screenshots/screenshot2.png)
+
+### Color Adjustments Panel
+
+![screenshot3](https://raw.githubusercontent.com/insidegui/VLCX/master/releases/screenshots/screenshot3.png)
 
 ## Using
 

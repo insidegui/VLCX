@@ -16,3 +16,7 @@ profile
 DerivedData
 .idea/
 VLCKit.framework
+VLCKit.framework/*
+Crashlytics.framework
+Crashlytics.framework/*
+Config.h

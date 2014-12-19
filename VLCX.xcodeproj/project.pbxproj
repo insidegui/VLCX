@@ -48,6 +48,7 @@
 		DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */; };
 		DDFE8ED91A444D1A00AD312E /* VXAdjustmentSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */; };
 		DDFE8EDC1A44524C00AD312E /* VXVideoAdjustmentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */; };
+		DDFE8EDF1A445FD100AD312E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFE8EDE1A445FD100AD312E /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,6 +122,8 @@
 		DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXAdjustmentSliderCell.m; sourceTree = "<group>"; };
 		DDFE8EDA1A44524C00AD312E /* VXVideoAdjustmentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXVideoAdjustmentsController.h; sourceTree = "<group>"; };
 		DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXVideoAdjustmentsController.m; sourceTree = "<group>"; };
+		DDFE8EDE1A445FD100AD312E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		DDFE8EE01A44606A00AD312E /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFE8EDF1A445FD100AD312E /* Crashlytics.framework in Frameworks */,
 				DDD9259E1A3F69C200575E13 /* VLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +207,7 @@
 		DDD9256B1A3F699B00575E13 = {
 			isa = PBXGroup;
 			children = (
+				DDFE8EDE1A445FD100AD312E /* Crashlytics.framework */,
 				DDD9259D1A3F69C200575E13 /* VLCKit.framework */,
 				DDD925761A3F699B00575E13 /* VLCX */,
 				DDD925751A3F699B00575E13 /* Products */,
@@ -228,6 +233,7 @@
 				DDD925841A3F699B00575E13 /* Images.xcassets */,
 				DDD925861A3F699B00575E13 /* MainMenu.xib */,
 				DDD925771A3F699B00575E13 /* Supporting Files */,
+				DDFE8EE01A44606A00AD312E /* Config.h */,
 			);
 			path = VLCX;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				DD359D4D1A40835A00895C55 /* Set build number */,
 				DDD925721A3F699B00575E13 /* Resources */,
 				DDD925A01A3F69C200575E13 /* Embed Frameworks */,
+				DDFE8EDD1A445F7600AD312E /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -364,6 +371,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print VXActualBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\nformattedDate=$(/bin/date +\"%y%m%d\")\nbundleVersion=\"$formattedDate$buildNumber\"\n/usr/libexec/PlistBuddy -c \"Set :VXActualBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		DDFE8EDD1A445F7600AD312E /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 69b44b9b0e1f177a7fb1b6199e9a040897e9dfc0 22ecca766b464658a34a8526d5dad0b7a255f04ed7c47ac02769feb213488d25";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -495,6 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

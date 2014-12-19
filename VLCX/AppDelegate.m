@@ -11,6 +11,13 @@
 #import "VXMediaDocument.h"
 #import "NSDocumentController+VLCXAdditions.h"
 
+// you can safely comment out the line below
+#import "Config.h"
+
+#ifdef CRASHLYTICS_API_KEY
+#import <Crashlytics/Crashlytics.h>
+#endif
+
 @interface AppDelegate ()
 @end
 
@@ -47,6 +54,11 @@
     [doc showWindows];
 }
 
-
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+    #ifdef CRASHLYTICS_API_KEY
+    [Crashlytics startWithAPIKey:CRASHLYTICS_API_KEY];
+    #endif
+}
 
 @end

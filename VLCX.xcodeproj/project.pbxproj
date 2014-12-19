@@ -46,6 +46,8 @@
 		DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925B91A3F85D100575E13 /* VXWindowDragView.m */; };
 		DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925BC1A3F88EE00575E13 /* VXControllerView.m */; };
 		DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */; };
+		DDFE8ED91A444D1A00AD312E /* VXAdjustmentSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */; };
+		DDFE8EDC1A44524C00AD312E /* VXVideoAdjustmentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,6 +117,10 @@
 		DDD925BC1A3F88EE00575E13 /* VXControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXControllerView.m; sourceTree = "<group>"; };
 		DDECDD211A41E5C2002CAAA8 /* VXTimeSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXTimeSliderCell.h; sourceTree = "<group>"; };
 		DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXTimeSliderCell.m; sourceTree = "<group>"; };
+		DDFE8ED71A444D1A00AD312E /* VXAdjustmentSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXAdjustmentSliderCell.h; sourceTree = "<group>"; };
+		DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXAdjustmentSliderCell.m; sourceTree = "<group>"; };
+		DDFE8EDA1A44524C00AD312E /* VXVideoAdjustmentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXVideoAdjustmentsController.h; sourceTree = "<group>"; };
+		DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXVideoAdjustmentsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,8 @@
 				DD359D4F1A4086E700895C55 /* VXPlaybackController.m */,
 				DDBA4BA21A41BF810019926C /* VXMenuController.h */,
 				DDBA4BA31A41BF810019926C /* VXMenuController.m */,
+				DDFE8EDA1A44524C00AD312E /* VXVideoAdjustmentsController.h */,
+				DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +255,8 @@
 				DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */,
 				DD5302D21A420DFF00B49BD8 /* VXAudioPlayerWindow.h */,
 				DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */,
+				DDFE8ED71A444D1A00AD312E /* VXAdjustmentSliderCell.h */,
+				DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -371,6 +381,8 @@
 				DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */,
 				DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */,
 				DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */,
+				DDFE8ED91A444D1A00AD312E /* VXAdjustmentSliderCell.m in Sources */,
+				DDFE8EDC1A44524C00AD312E /* VXVideoAdjustmentsController.m in Sources */,
 				DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */,
 				DD5302D41A420DFF00B49BD8 /* VXAudioPlayerWindow.m in Sources */,
 				DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */,

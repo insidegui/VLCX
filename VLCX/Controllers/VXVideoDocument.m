@@ -9,12 +9,14 @@
 #import "VXVideoDocument.h"
 #import "VXControllerView.h"
 #import "VXWindowDragView.h"
+#import "VXVideoAdjustmentsController.h"
 
 @interface VXVideoDocument ()
 
 @property (weak) IBOutlet VXWindowDragView *dragView;
 @property (weak) IBOutlet VXControllerView *controllerView;
 @property (strong) IBOutlet VLCVideoView *videoView;
+@property (strong) IBOutlet VXVideoAdjustmentsController *videoAdjustmentsController;
 
 @end
 
@@ -44,6 +46,8 @@
     
     // the playbackController will get the media delegate callbacks
     self.media.delegate = self.playbackController;
+    
+    [self.videoAdjustmentsController setPlayer:self.player];
     
     if (!self.media) {
         // we will set the media later
@@ -97,6 +101,19 @@
 - (IBAction)toggleFullscreen:(id)sender
 {
     [self.windowForSheet toggleFullScreen:sender];
+}
+
+- (IBAction)toggleVideoAdjustmentsPanel:(id)sender
+{
+    if (!self.player.media) return;
+    
+    [self.videoAdjustmentsController togglePanelVisibility];
+    
+    if (self.videoAdjustmentsController.isPanelVisible) {
+        [sender setState:NSOnState];
+    } else {
+        [sender setState:NSOffState];
+    }
 }
 
 @end

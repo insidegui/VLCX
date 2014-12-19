@@ -358,6 +358,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Video" id="Phi-qR-wjM">
                         <items>
+                            <menuItem title="Show Adjustments Panel" keyEquivalent="A" id="CwT-xT-TQM">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleVideoAdjustmentsPanel:" target="-1" id="Cox-pH-kEh"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Fullscreen" keyEquivalent="f" id="LlB-JZ-AEf">
                                 <connections>
                                     <action selector="toggleFullscreen:" target="-1" id="2WW-Hy-OwG"/>

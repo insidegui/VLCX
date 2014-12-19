@@ -9,6 +9,7 @@
                 <outlet property="controllerView" destination="TlB-vP-t32" id="Xcx-X4-hJq"/>
                 <outlet property="dragView" destination="pda-6Q-zmn" id="llc-2L-aHy"/>
                 <outlet property="playbackController" destination="D9o-lx-HwS" id="ccn-xJ-ySx"/>
+                <outlet property="videoAdjustmentsController" destination="Wjk-Ry-Trw" id="7gH-KQ-hCy"/>
                 <outlet property="videoView" destination="LEa-r0-YBo" id="wPn-xa-nBG"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
@@ -116,10 +117,131 @@ IA
                                     <constraint firstAttribute="bottom" secondItem="fgn-Nq-Z4X" secondAttribute="bottom" constant="5" id="xyT-ky-9ZI"/>
                                 </constraints>
                             </visualEffectView>
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-CJ-uZI">
+                                <rect key="frame" x="390" y="0.0" width="250" height="360"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-tJ-UIj">
+                                        <rect key="frame" x="18" y="304" width="150" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Video Adjustments" id="453-6N-gWu">
+                                            <font key="font" size="18" name="HelveticaNeue-Light"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-zf-AWz">
+                                        <rect key="frame" x="18" y="265" width="70" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Brightness" id="Nnm-O3-UxH">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="chN-a3-OHJ">
+                                        <rect key="frame" x="18" y="188" width="214" height="21"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="2" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="e6v-QW-UbH" customClass="VXAdjustmentSliderCell"/>
+                                        <connections>
+                                            <action selector="contrastSliderAction:" target="Wjk-Ry-Trw" id="t9d-kf-bCh"/>
+                                        </connections>
+                                    </slider>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vUz-OD-CmX">
+                                        <rect key="frame" x="18" y="215" width="58" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Contrast" id="I3s-Sy-e4H">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N4u-ZS-vSO">
+                                        <rect key="frame" x="18" y="138" width="214" height="21"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="10" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="oQT-eV-Cqy" customClass="VXAdjustmentSliderCell"/>
+                                        <connections>
+                                            <action selector="gammaSliderAction:" target="Wjk-Ry-Trw" id="Rah-us-vS1"/>
+                                        </connections>
+                                    </slider>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o5g-7f-1gF">
+                                        <rect key="frame" x="18" y="165" width="53" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gamma" id="ori-A9-f05">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="95G-dg-yZO">
+                                        <rect key="frame" x="18" y="88" width="214" height="21"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="360" tickMarkPosition="above" sliderType="linear" id="Tjs-tj-Rix" customClass="VXAdjustmentSliderCell"/>
+                                        <connections>
+                                            <action selector="hueSliderAction:" target="Wjk-Ry-Trw" id="bPk-Xo-Fxv"/>
+                                        </connections>
+                                    </slider>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XYw-yi-eNa">
+                                        <rect key="frame" x="18" y="115" width="29" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hue" id="SD0-Nx-ouk">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5lM-pn-Ozu">
+                                        <rect key="frame" x="18" y="38" width="214" height="21"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="3" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Vel-n3-zvj" customClass="VXAdjustmentSliderCell"/>
+                                        <connections>
+                                            <action selector="saturationSliderAction:" target="Wjk-Ry-Trw" id="JC4-LS-YLi"/>
+                                        </connections>
+                                    </slider>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7V-5d-9dk">
+                                        <rect key="frame" x="18" y="65" width="68" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Saturation" id="9oq-kB-6je">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rNL-D8-6d0">
+                                        <rect key="frame" x="18" y="238" width="214" height="21"/>
+                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="2" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="A3O-6f-RU7" customClass="VXAdjustmentSliderCell"/>
+                                        <connections>
+                                            <action selector="brightnessSliderAction:" target="Wjk-Ry-Trw" id="Nyu-H8-oz2"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rNL-D8-6d0" secondAttribute="trailing" constant="20" id="17t-2e-Cq6"/>
+                                    <constraint firstAttribute="trailing" secondItem="95G-dg-yZO" secondAttribute="trailing" constant="20" id="2mN-Id-ZgP"/>
+                                    <constraint firstItem="rNL-D8-6d0" firstAttribute="top" secondItem="kJQ-zf-AWz" secondAttribute="bottom" constant="8" id="4Rx-ik-kcl"/>
+                                    <constraint firstItem="Q7V-5d-9dk" firstAttribute="top" secondItem="95G-dg-yZO" secondAttribute="bottom" constant="8" id="EPW-IX-kZv"/>
+                                    <constraint firstAttribute="width" constant="250" id="G2X-cP-fAg"/>
+                                    <constraint firstItem="o5g-7f-1gF" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="IJg-aF-nPU"/>
+                                    <constraint firstItem="chN-a3-OHJ" firstAttribute="top" secondItem="vUz-OD-CmX" secondAttribute="bottom" constant="8" id="IR0-qv-fA1"/>
+                                    <constraint firstItem="95G-dg-yZO" firstAttribute="top" secondItem="XYw-yi-eNa" secondAttribute="bottom" constant="8" id="Ncv-31-7Lq"/>
+                                    <constraint firstItem="Q7V-5d-9dk" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="Tmc-rV-tLc"/>
+                                    <constraint firstItem="chN-a3-OHJ" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="Vp2-vj-QC5"/>
+                                    <constraint firstAttribute="trailing" secondItem="5lM-pn-Ozu" secondAttribute="trailing" constant="20" id="Yxn-sZ-hoO"/>
+                                    <constraint firstItem="vUz-OD-CmX" firstAttribute="top" secondItem="rNL-D8-6d0" secondAttribute="bottom" constant="8" id="Z9c-yn-qgN"/>
+                                    <constraint firstItem="XYw-yi-eNa" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="ZWG-yE-G4H"/>
+                                    <constraint firstItem="5lM-pn-Ozu" firstAttribute="top" secondItem="Q7V-5d-9dk" secondAttribute="bottom" constant="8" id="bkG-SV-xeh"/>
+                                    <constraint firstItem="XYw-yi-eNa" firstAttribute="top" secondItem="N4u-ZS-vSO" secondAttribute="bottom" constant="8" id="caZ-dv-3MD"/>
+                                    <constraint firstItem="kJQ-zf-AWz" firstAttribute="top" secondItem="ij9-tJ-UIj" secondAttribute="bottom" constant="22" id="eGr-5a-hUn"/>
+                                    <constraint firstItem="N4u-ZS-vSO" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="eda-K0-1U0"/>
+                                    <constraint firstItem="ij9-tJ-UIj" firstAttribute="top" secondItem="dBl-CJ-uZI" secondAttribute="top" constant="34" id="fXi-IS-KaD"/>
+                                    <constraint firstItem="rNL-D8-6d0" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="iXa-nq-dcL"/>
+                                    <constraint firstItem="95G-dg-yZO" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="kmw-Rw-KaF"/>
+                                    <constraint firstAttribute="trailing" secondItem="chN-a3-OHJ" secondAttribute="trailing" constant="20" id="n8D-XN-iRL"/>
+                                    <constraint firstItem="kJQ-zf-AWz" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="nJP-H0-cst"/>
+                                    <constraint firstItem="N4u-ZS-vSO" firstAttribute="top" secondItem="o5g-7f-1gF" secondAttribute="bottom" constant="8" id="p51-6B-Eop"/>
+                                    <constraint firstItem="5lM-pn-Ozu" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="tMd-hE-OvM"/>
+                                    <constraint firstAttribute="trailing" secondItem="N4u-ZS-vSO" secondAttribute="trailing" constant="20" id="up4-eT-HNe"/>
+                                    <constraint firstItem="o5g-7f-1gF" firstAttribute="top" secondItem="chN-a3-OHJ" secondAttribute="bottom" constant="8" id="xVp-vp-qeV"/>
+                                    <constraint firstItem="vUz-OD-CmX" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="yOf-nA-mM4"/>
+                                    <constraint firstItem="ij9-tJ-UIj" firstAttribute="leading" secondItem="dBl-CJ-uZI" secondAttribute="leading" constant="20" id="ytO-MN-snc"/>
+                                </constraints>
+                            </visualEffectView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="TlB-vP-t32" secondAttribute="bottom" constant="51" id="NrU-T3-BX7"/>
                             <constraint firstAttribute="bottom" secondItem="LEa-r0-YBo" secondAttribute="bottom" id="R62-4z-8AC"/>
+                            <constraint firstAttribute="trailing" secondItem="dBl-CJ-uZI" secondAttribute="trailing" id="UZs-Tn-24b"/>
+                            <constraint firstItem="dBl-CJ-uZI" firstAttribute="top" secondItem="pda-6Q-zmn" secondAttribute="top" id="cHV-HI-hVM"/>
+                            <constraint firstAttribute="bottom" secondItem="dBl-CJ-uZI" secondAttribute="bottom" id="fH3-nv-JG4"/>
                             <constraint firstItem="LEa-r0-YBo" firstAttribute="top" secondItem="pda-6Q-zmn" secondAttribute="top" id="geE-UZ-uof"/>
                             <constraint firstAttribute="trailing" secondItem="LEa-r0-YBo" secondAttribute="trailing" id="jjC-1C-deS"/>
                             <constraint firstAttribute="centerX" secondItem="TlB-vP-t32" secondAttribute="centerX" id="mB4-D1-ebW"/>
@@ -175,6 +297,17 @@ IA
                 <outlet property="volumeMaxButton" destination="jpZ-xs-OiW" id="mw5-Ao-8mP"/>
                 <outlet property="volumeMinButton" destination="cte-wt-5vI" id="C34-w6-3z0"/>
                 <outlet property="volumeSlider" destination="C6W-c4-DTe" id="x6K-eA-TIQ"/>
+            </connections>
+        </viewController>
+        <viewController id="Wjk-Ry-Trw" customClass="VXVideoAdjustmentsController">
+            <connections>
+                <outlet property="brightnessSlider" destination="rNL-D8-6d0" id="qPA-nu-AxU"/>
+                <outlet property="contrastSlider" destination="chN-a3-OHJ" id="C2V-6n-uEk"/>
+                <outlet property="gammaSlider" destination="N4u-ZS-vSO" id="KXc-Zx-7tw"/>
+                <outlet property="hueSlider" destination="95G-dg-yZO" id="Zg5-rA-n4h"/>
+                <outlet property="rightConstraint" destination="UZs-Tn-24b" id="uT9-oL-APz"/>
+                <outlet property="saturationSlider" destination="5lM-pn-Ozu" id="mNU-GT-pWI"/>
+                <outlet property="view" destination="dBl-CJ-uZI" id="l06-zq-7C9"/>
             </connections>
         </viewController>
         <customObject id="fqo-qs-WnO" customClass="VXMenuController">

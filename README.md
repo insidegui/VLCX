@@ -23,3 +23,9 @@ If you just want to use VLCX, [download the latest release here](https://github.
 ## Building
 
 To build VLCX from the source, get a copy of VLCKit.framework [here](https://wiki.videolan.org/VLCKit/).
+
+The app also uses Sparkle for updating, you can learn more abour Sparkle [here](https://github.com/sparkle-project/Sparkle).
+If you are going to release the app, you must change the SUFeedURL key in the Info.plist to point to your appcast, or just remove the auto-update feature entirely.
+
+I'm also using Crashlytics to track usage/crashes, if you want to release the app and use Crashlytics, you must create a Config.h file and set your apikey like `#define CRASHLYTICS_API_KEY @"your-crashlytics-apikey-here"`.
+If you're not using Crashlytics, comment out line `15` in `AppDelegate.m`.

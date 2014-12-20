@@ -20,9 +20,6 @@
 #import <Crashlytics/Crashlytics.h>
 #endif
 
-NSString const* VLCXInternetDocumentTypeName = @"Internet File";
-NSTimeInterval const VLCXURLRequestTimeoutInterval = 5.0;
-
 @interface AppDelegate ()
 
 @property (strong) VXURLMediaDetector *mediaDetector;

@@ -14,4 +14,6 @@
 
 @property (nonatomic, weak) VLCMediaPlayer *player;
 
+- (void)setupSubtitleTracksMenu;
+
 @end

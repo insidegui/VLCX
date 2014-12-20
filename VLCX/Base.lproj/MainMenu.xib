@@ -383,6 +383,13 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="Xcp-vR-Etw"/>
+                            <menuItem title="Open Subtitles File..." id="JYR-xp-LFA">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openSubtitlesFile:" target="-1" id="oki-7e-evY"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="vOd-2o-ls0"/>
                             <menuItem title="Video Tracks" tag="66" id="AQx-qY-9du">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Video Tracks" id="hWG-6r-GqP">

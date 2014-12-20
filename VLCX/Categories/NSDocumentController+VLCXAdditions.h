@@ -13,5 +13,6 @@
 + (NSDictionary *)documentInfoForExtension:(NSString *)pathExtension;
 + (NSString *)documentTypeNameForExtension:(NSString *)pathExtension;
 + (Class)documentClassForExtension:(NSString *)pathExtension;
++ (NSArray *)subtitlesFileTypes;
 
 @end

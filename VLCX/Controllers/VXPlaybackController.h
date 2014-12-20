@@ -12,6 +12,7 @@
 
 @interface VXPlaybackController : NSViewController <VLCMediaDelegate, VLCMediaPlayerDelegate>
 
+- (void)updateSubtitlesMenuAfterOpeningCustomSubtitle;
 - (void)volumeUp;
 - (void)volumeDown;
 - (IBAction)playOrPause:(id)sender;

@@ -8,6 +8,8 @@
 
 #import "NSDocumentController+VLCXAdditions.h"
 
+static NSArray *_cachedSubtitlesFileTypes;
+
 @implementation NSDocumentController (VLCXAdditions)
 
 + (NSDictionary *)documentInfoForExtension:(NSString *)pathExtension
@@ -37,6 +39,22 @@
     if (!info) return NULL;
     
     return NSClassFromString(info[@"NSDocumentClass"]);
+}
+
++ (NSArray *)subtitlesFileTypes
+{
+    if (!_cachedSubtitlesFileTypes) {
+        NSMutableArray *fileTypes = [NSMutableArray new];
+        
+        for (NSDictionary *typeInfo in [NSBundle mainBundle].infoDictionary[@"CFBundleDocumentTypes"]) {
+            // I know this is kind of hacky :3
+            if ([typeInfo[@"CFBundleTypeIconFile"] isEqualToString:@"subtitle.icns"]) [fileTypes addObjectsFromArray:typeInfo[@"CFBundleTypeExtensions"]];
+        }
+        
+        _cachedSubtitlesFileTypes = [fileTypes copy];
+    }
+    
+    return _cachedSubtitlesFileTypes;
 }
 
 @end

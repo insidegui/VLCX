@@ -10,6 +10,8 @@
 #import "VXControllerView.h"
 #import "VXWindowDragView.h"
 #import "VXVideoAdjustmentsController.h"
+#import "NSDocumentController+VLCXAdditions.h"
+#import "VXPlayerWindow.h"
 
 @interface VXVideoDocument ()
 
@@ -96,6 +98,29 @@
     NSString *snapshotURL = [NSString pathWithComponents:@[searchPaths[0], filename]];
     
     [self.player saveVideoSnapshotAt:snapshotURL withWidth:self.player.videoSize.width andHeight:self.player.videoSize.height];
+}
+
+- (IBAction)openSubtitlesFile:(id)sender
+{
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    openPanel.allowedFileTypes = [NSDocumentController subtitlesFileTypes];
+    openPanel.title = NSLocalizedString(@"Open subtitles file", @"Open subtitles file");
+    
+    [(VXPlayerWindow *)self.windowForSheet showTitlebarAnimated:NO];
+    [openPanel beginSheetModalForWindow:self.windowForSheet completionHandler:^(NSInteger result) {
+        if (!result) return;
+        
+        BOOL opened = [self.player openVideoSubTitlesFromFile:openPanel.URL.path];
+        
+        if (opened) {
+            [self.playbackController updateSubtitlesMenuAfterOpeningCustomSubtitle];
+        } else {
+            NSError *error = [NSError errorWithDomain:@"vlcx"
+                                                 code:0
+                                             userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to open subtitles file", @"Unable to open subtitles file")}];
+            [[NSAlert alertWithError:error] runModal];
+        }
+    }];
 }
 
 - (IBAction)toggleFullscreen:(id)sender

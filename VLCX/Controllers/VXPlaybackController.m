@@ -7,8 +7,8 @@
 //
 
 #import "VXPlaybackController.h"
-#import "VXMenuController.h"
 #import "VXPlayerWindow.h"
+#import "VXMenuController.h"
 
 @interface VXPlaybackController ()
 
@@ -184,6 +184,13 @@
 {
     self.currentTimeLabel.stringValue = time.stringValue;
     self.timeLeftLabel.stringValue = [NSString stringWithFormat:@"-%@", [VLCTime timeWithInt:(self.player.media.length.intValue-time.intValue)].stringValue];
+}
+
+- (void)updateSubtitlesMenuAfterOpeningCustomSubtitle
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.menuController setupSubtitleTracksMenu];
+    });
 }
 
 #pragma mark Playback States

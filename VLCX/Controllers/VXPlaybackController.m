@@ -103,6 +103,8 @@
 }
 
 - (IBAction)timeSliderAction:(id)sender {
+    if (!self.player.media.length.intValue) return;
+    
     VLCTime *newTime = [VLCTime timeWithInt:self.timeSlider.intValue];
     self.player.time = newTime;
     
@@ -158,6 +160,8 @@
 
 - (void)updateTimeControls
 {
+    if (!self.player.media.length.intValue) return;
+    
     self.timeSlider.maxValue = self.player.media.length.intValue;
     self.timeSlider.intValue = self.player.time.intValue;
     

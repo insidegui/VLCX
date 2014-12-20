@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD2D41CE1A45C80D00BA94C8 /* VXURLMediaDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2D41CD1A45C80D00BA94C8 /* VXURLMediaDetector.m */; };
+		DD2D41D11A45D48E00BA94C8 /* VXLoadingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2D41D01A45D48E00BA94C8 /* VXLoadingWindow.m */; };
 		DD359D381A40798000895C55 /* aiff.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D241A40798000895C55 /* aiff.icns */; };
 		DD359D391A40798000895C55 /* audio.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D251A40798000895C55 /* audio.icns */; };
 		DD359D3A1A40798000895C55 /* avi.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D261A40798000895C55 /* avi.icns */; };
@@ -69,6 +71,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD2D41CC1A45C80D00BA94C8 /* VXURLMediaDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXURLMediaDetector.h; sourceTree = "<group>"; };
+		DD2D41CD1A45C80D00BA94C8 /* VXURLMediaDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXURLMediaDetector.m; sourceTree = "<group>"; };
+		DD2D41CF1A45D48E00BA94C8 /* VXLoadingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXLoadingWindow.h; sourceTree = "<group>"; };
+		DD2D41D01A45D48E00BA94C8 /* VXLoadingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXLoadingWindow.m; sourceTree = "<group>"; };
 		DD359D241A40798000895C55 /* aiff.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = aiff.icns; path = "Design/deploy/File icons/aiff.icns"; sourceTree = SOURCE_ROOT; };
 		DD359D251A40798000895C55 /* audio.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = audio.icns; path = "Design/deploy/File icons/audio.icns"; sourceTree = SOURCE_ROOT; };
 		DD359D261A40798000895C55 /* avi.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = avi.icns; path = "Design/deploy/File icons/avi.icns"; sourceTree = SOURCE_ROOT; };
@@ -144,6 +150,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD2D41C81A45C7D400BA94C8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DD2D41CC1A45C80D00BA94C8 /* VXURLMediaDetector.h */,
+				DD2D41CD1A45C80D00BA94C8 /* VXURLMediaDetector.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DD359D231A40795000895C55 /* File Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +246,7 @@
 		DDD925761A3F699B00575E13 /* VLCX */ = {
 			isa = PBXGroup;
 			children = (
+				DD2D41C81A45C7D400BA94C8 /* Helpers */,
 				DD58741D1A4283D6000C6677 /* Categories */,
 				DD359D4C1A40823600895C55 /* Controllers */,
 				DDD925A11A3F6B7500575E13 /* Interface */,
@@ -269,6 +285,8 @@
 				DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */,
 				DDFE8ED71A444D1A00AD312E /* VXAdjustmentSliderCell.h */,
 				DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */,
+				DD2D41CF1A45D48E00BA94C8 /* VXLoadingWindow.h */,
+				DD2D41D01A45D48E00BA94C8 /* VXLoadingWindow.m */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -408,7 +426,9 @@
 				DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */,
 				DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */,
 				DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */,
+				DD2D41D11A45D48E00BA94C8 /* VXLoadingWindow.m in Sources */,
 				DDFE8ED91A444D1A00AD312E /* VXAdjustmentSliderCell.m in Sources */,
+				DD2D41CE1A45C80D00BA94C8 /* VXURLMediaDetector.m in Sources */,
 				DDFE8EDC1A44524C00AD312E /* VXVideoAdjustmentsController.m in Sources */,
 				DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */,
 				DD5302D41A420DFF00B49BD8 /* VXAudioPlayerWindow.m in Sources */,

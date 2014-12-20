@@ -1465,7 +1465,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>141220247</string>
+	<string>141220289</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1483,6 +1483,6 @@
 	<key>SUScheduledCheckInterval</key>
 	<integer>86400</integer>
 	<key>VXActualBundleVersion</key>
-	<string>247</string>
+	<string>289</string>
 </dict>
 </plist>

@@ -122,6 +122,13 @@
         [self.playerWindow sizeToFitVideoSize:self.player.videoSize animated:YES];
     }
     
+    // disable the time slider if the total media time is unknown
+    if (!self.player.media.length.intValue) self.timeSlider.enabled = NO;
+    
+    // set default volume level
+    // TODO: add a preference and/or save previous level
+    self.player.audio.volume = 100;
+    
     // do an initial update on the time controls
     [self updateTimeControls];
     
@@ -160,10 +167,10 @@
 
 - (void)updateTimeControls
 {
-    if (!self.player.media.length.intValue) return;
-    
-    self.timeSlider.maxValue = self.player.media.length.intValue;
-    self.timeSlider.intValue = self.player.time.intValue;
+    if (self.player.media.length.intValue) {
+        self.timeSlider.maxValue = self.player.media.length.intValue;
+        self.timeSlider.intValue = self.player.time.intValue;
+    }
     
     [self updateTimeLabels];
 }

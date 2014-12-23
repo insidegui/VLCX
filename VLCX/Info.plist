@@ -47,7 +47,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>NSDocumentClass</key>
-			<string>VXAudioDocument</string>
+			<string>VXPlaylistDocument</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -62,7 +62,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>NSDocumentClass</key>
-			<string>VXVideoDocument</string>
+			<string>VXPlaylistDocument</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -81,7 +81,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>NSDocumentClass</key>
-			<string>VXVideoDocument</string>
+			<string>VXPlaylistDocument</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -95,7 +95,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>NSDocumentClass</key>
-			<string>VXVideoDocument</string>
+			<string>VXPlaylistDocument</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -109,7 +109,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>NSDocumentClass</key>
-			<string>VXVideoDocument</string>
+			<string>VXPlaylistDocument</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -1433,6 +1433,40 @@
 			<key>NSPersistentStoreTypeKey</key>
 			<string>Binary</string>
 		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>vlcx</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>VLCX Playlist</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>br.com.guilhermerambo.VLCX.Playlist</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<integer>0</integer>
+			<key>NSDocumentClass</key>
+			<string>VXPlaylistDocument</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>plparser</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>VLCX Playlist Plugin</string>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>br.com.guilhermerambo.VLCX.PLParser</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
@@ -1465,7 +1499,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>141220299</string>
+	<string>141222337</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1482,7 +1516,44 @@
 	<string>http://appverse.guilhermerambo.me/vlcx/appcast.xml</string>
 	<key>SUScheduledCheckInterval</key>
 	<integer>86400</integer>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>VLCX Playlist</string>
+			<key>UTTypeIconFile</key>
+			<string>playlist</string>
+			<key>UTTypeIdentifier</key>
+			<string>br.com.guilhermerambo.VLCX.Playlist</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>vlcx</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array/>
+			<key>UTTypeDescription</key>
+			<string>VLCX Playlist Plugin</string>
+			<key>UTTypeIdentifier</key>
+			<string>br.com.guilhermerambo.VLCX.PLPlugin</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>plparser</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 	<key>VXActualBundleVersion</key>
-	<string>299</string>
+	<integer>337</integer>
 </dict>
 </plist>

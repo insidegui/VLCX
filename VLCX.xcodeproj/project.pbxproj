@@ -37,6 +37,8 @@
 		DD5874201A42843D000C6677 /* NSDocumentController+VLCXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD58741F1A42843D000C6677 /* NSDocumentController+VLCXAdditions.m */; };
 		DD6478E21A44A4AB004E6FF5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6478E11A44A4AB004E6FF5 /* Sparkle.framework */; };
 		DD6478E31A44A5D3004E6FF5 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD6478E11A44A4AB004E6FF5 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDA6E3CB1A4765A7001AF52E /* VXPlaylistDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6E3C91A4765A7001AF52E /* VXPlaylistDocument.m */; };
+		DDA6E3CC1A4765A7001AF52E /* VXPlaylistDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDA6E3CA1A4765A7001AF52E /* VXPlaylistDocument.xib */; };
 		DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBA4BA31A41BF810019926C /* VXMenuController.m */; };
 		DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257A1A3F699B00575E13 /* AppDelegate.m */; };
 		DDD9257D1A3F699B00575E13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD9257C1A3F699B00575E13 /* main.m */; };
@@ -49,11 +51,35 @@
 		DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925A31A3F6B9400575E13 /* VXPlayerWindow.m */; };
 		DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925B91A3F85D100575E13 /* VXWindowDragView.m */; };
 		DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925BC1A3F88EE00575E13 /* VXControllerView.m */; };
+		DDE85C621A48E7F6002D313D /* VXPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE85C5E1A48E7F6002D313D /* VXPlaylist.m */; };
+		DDE85C631A48E7F6002D313D /* VXPlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE85C601A48E7F6002D313D /* VXPlaylistItem.m */; };
+		DDE85C751A48EBA1002D313D /* M3UParser.plparser in Copy Playlist Plugins */ = {isa = PBXBuildFile; fileRef = DDE85C6B1A48EAB9002D313D /* M3UParser.plparser */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDE85C7B1A48ED14002D313D /* VXPlaylistParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE85C7A1A48ED14002D313D /* VXPlaylistParser.m */; };
+		DDE85C7C1A48ED4B002D313D /* M3UParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE85C771A48EBE4002D313D /* M3UParser.m */; };
+		DDE85CBF1A48FA42002D313D /* VLCXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE85CBE1A48FA42002D313D /* VLCXParser.m */; };
+		DDE85CC21A48FB82002D313D /* VLCXParser.plparser in Copy Playlist Plugins */ = {isa = PBXBuildFile; fileRef = DDE85CB51A48F9DC002D313D /* VLCXParser.plparser */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */; };
 		DDFE8ED91A444D1A00AD312E /* VXAdjustmentSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */; };
 		DDFE8EDC1A44524C00AD312E /* VXVideoAdjustmentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */; };
 		DDFE8EDF1A445FD100AD312E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFE8EDE1A445FD100AD312E /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDE85C7D1A48ED59002D313D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDD9256C1A3F699B00575E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDE85C6A1A48EAB9002D313D;
+			remoteInfo = M3UParser;
+		};
+		DDE85CC01A48FB76002D313D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDD9256C1A3F699B00575E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDE85CB41A48F9DC002D313D;
+			remoteInfo = VLCXParser;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DDD925A01A3F69C200575E13 /* Embed Frameworks */ = {
@@ -66,6 +92,18 @@
 				DD6478E31A44A5D3004E6FF5 /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE85C741A48EB91002D313D /* Copy Playlist Plugins */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DDE85C751A48EBA1002D313D /* M3UParser.plparser in Copy Playlist Plugins */,
+				DDE85CC21A48FB82002D313D /* VLCXParser.plparser in Copy Playlist Plugins */,
+			);
+			name = "Copy Playlist Plugins";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -107,6 +145,9 @@
 		DD58741E1A42843D000C6677 /* NSDocumentController+VLCXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocumentController+VLCXAdditions.h"; sourceTree = "<group>"; };
 		DD58741F1A42843D000C6677 /* NSDocumentController+VLCXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocumentController+VLCXAdditions.m"; sourceTree = "<group>"; };
 		DD6478E11A44A4AB004E6FF5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		DDA6E3C81A4765A7001AF52E /* VXPlaylistDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlaylistDocument.h; sourceTree = "<group>"; };
+		DDA6E3C91A4765A7001AF52E /* VXPlaylistDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlaylistDocument.m; sourceTree = "<group>"; };
+		DDA6E3CA1A4765A7001AF52E /* VXPlaylistDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VXPlaylistDocument.xib; sourceTree = "<group>"; };
 		DDBA4BA21A41BF810019926C /* VXMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXMenuController.h; sourceTree = "<group>"; };
 		DDBA4BA31A41BF810019926C /* VXMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXMenuController.m; sourceTree = "<group>"; };
 		DDD925741A3F699B00575E13 /* VLCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +167,21 @@
 		DDD925B91A3F85D100575E13 /* VXWindowDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXWindowDragView.m; sourceTree = "<group>"; };
 		DDD925BB1A3F88EE00575E13 /* VXControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXControllerView.h; sourceTree = "<group>"; };
 		DDD925BC1A3F88EE00575E13 /* VXControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXControllerView.m; sourceTree = "<group>"; };
+		DDE85C5D1A48E7F6002D313D /* VXPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlaylist.h; sourceTree = "<group>"; };
+		DDE85C5E1A48E7F6002D313D /* VXPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlaylist.m; sourceTree = "<group>"; };
+		DDE85C5F1A48E7F6002D313D /* VXPlaylistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlaylistItem.h; sourceTree = "<group>"; };
+		DDE85C601A48E7F6002D313D /* VXPlaylistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlaylistItem.m; sourceTree = "<group>"; };
+		DDE85C651A48E997002D313D /* VXPlaylistPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VXPlaylistPlugin.h; sourceTree = "<group>"; };
+		DDE85C6B1A48EAB9002D313D /* M3UParser.plparser */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M3UParser.plparser; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE85C721A48EAE6002D313D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "VLCX/Playlist Parsers/M3UParser/Info.plist"; sourceTree = SOURCE_ROOT; };
+		DDE85C761A48EBE4002D313D /* M3UParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3UParser.h; path = "VLCX/Playlist Parsers/M3UParser/M3UParser.h"; sourceTree = SOURCE_ROOT; };
+		DDE85C771A48EBE4002D313D /* M3UParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3UParser.m; path = "VLCX/Playlist Parsers/M3UParser/M3UParser.m"; sourceTree = SOURCE_ROOT; };
+		DDE85C791A48ED14002D313D /* VXPlaylistParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlaylistParser.h; sourceTree = "<group>"; };
+		DDE85C7A1A48ED14002D313D /* VXPlaylistParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlaylistParser.m; sourceTree = "<group>"; };
+		DDE85CB51A48F9DC002D313D /* VLCXParser.plparser */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VLCXParser.plparser; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE85CBC1A48FA01002D313D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "VLCX/Playlist Parsers/VLCXParser/Info.plist"; sourceTree = SOURCE_ROOT; };
+		DDE85CBD1A48FA42002D313D /* VLCXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLCXParser.h; path = "VLCX/Playlist Parsers/VLCXParser/VLCXParser.h"; sourceTree = SOURCE_ROOT; };
+		DDE85CBE1A48FA42002D313D /* VLCXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLCXParser.m; path = "VLCX/Playlist Parsers/VLCXParser/VLCXParser.m"; sourceTree = SOURCE_ROOT; };
 		DDECDD211A41E5C2002CAAA8 /* VXTimeSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXTimeSliderCell.h; sourceTree = "<group>"; };
 		DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXTimeSliderCell.m; sourceTree = "<group>"; };
 		DDFE8ED71A444D1A00AD312E /* VXAdjustmentSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXAdjustmentSliderCell.h; sourceTree = "<group>"; };
@@ -144,6 +200,20 @@
 				DDFE8EDF1A445FD100AD312E /* Crashlytics.framework in Frameworks */,
 				DD6478E21A44A4AB004E6FF5 /* Sparkle.framework in Frameworks */,
 				DDD9259E1A3F69C200575E13 /* VLCKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE85C681A48EAB9002D313D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE85CB21A48F9DC002D313D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +281,9 @@
 				DDD9257E1A3F699B00575E13 /* VXVideoDocument.h */,
 				DDD9257F1A3F699B00575E13 /* VXVideoDocument.m */,
 				DDD925811A3F699B00575E13 /* VXVideoDocument.xib */,
+				DDA6E3C81A4765A7001AF52E /* VXPlaylistDocument.h */,
+				DDA6E3C91A4765A7001AF52E /* VXPlaylistDocument.m */,
+				DDA6E3CA1A4765A7001AF52E /* VXPlaylistDocument.xib */,
 			);
 			name = "Document Types";
 			sourceTree = "<group>";
@@ -239,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				DDD925741A3F699B00575E13 /* VLCX.app */,
+				DDE85C6B1A48EAB9002D313D /* M3UParser.plparser */,
+				DDE85CB51A48F9DC002D313D /* VLCXParser.plparser */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +321,8 @@
 		DDD925761A3F699B00575E13 /* VLCX */ = {
 			isa = PBXGroup;
 			children = (
+				DDE85C661A48EA57002D313D /* Playlist Parsers */,
+				DDE85C5A1A48E6FA002D313D /* Models */,
 				DD2D41C81A45C7D400BA94C8 /* Helpers */,
 				DD58741D1A4283D6000C6677 /* Categories */,
 				DD359D4C1A40823600895C55 /* Controllers */,
@@ -291,6 +368,75 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
+		DDE85C5A1A48E6FA002D313D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDE85C641A48E96F002D313D /* PlugIn Support */,
+				DDE85C5D1A48E7F6002D313D /* VXPlaylist.h */,
+				DDE85C5E1A48E7F6002D313D /* VXPlaylist.m */,
+				DDE85C5F1A48E7F6002D313D /* VXPlaylistItem.h */,
+				DDE85C601A48E7F6002D313D /* VXPlaylistItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDE85C641A48E96F002D313D /* PlugIn Support */ = {
+			isa = PBXGroup;
+			children = (
+				DDE85C651A48E997002D313D /* VXPlaylistPlugin.h */,
+				DDE85C791A48ED14002D313D /* VXPlaylistParser.h */,
+				DDE85C7A1A48ED14002D313D /* VXPlaylistParser.m */,
+			);
+			name = "PlugIn Support";
+			sourceTree = "<group>";
+		};
+		DDE85C661A48EA57002D313D /* Playlist Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				DDE85CB61A48F9DC002D313D /* VLCXParser */,
+				DDE85C6C1A48EAB9002D313D /* M3UParser */,
+			);
+			path = "Playlist Parsers";
+			sourceTree = "<group>";
+		};
+		DDE85C6C1A48EAB9002D313D /* M3UParser */ = {
+			isa = PBXGroup;
+			children = (
+				DDE85C6D1A48EAB9002D313D /* Supporting Files */,
+				DDE85C761A48EBE4002D313D /* M3UParser.h */,
+				DDE85C771A48EBE4002D313D /* M3UParser.m */,
+			);
+			name = M3UParser;
+			path = ../../M3UParser;
+			sourceTree = "<group>";
+		};
+		DDE85C6D1A48EAB9002D313D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDE85C721A48EAE6002D313D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDE85CB61A48F9DC002D313D /* VLCXParser */ = {
+			isa = PBXGroup;
+			children = (
+				DDE85CB71A48F9DC002D313D /* Supporting Files */,
+				DDE85CBD1A48FA42002D313D /* VLCXParser.h */,
+				DDE85CBE1A48FA42002D313D /* VLCXParser.m */,
+			);
+			name = VLCXParser;
+			path = ../../VLCXParser;
+			sourceTree = "<group>";
+		};
+		DDE85CB71A48F9DC002D313D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDE85CBC1A48FA01002D313D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,17 +448,54 @@
 				DDD925711A3F699B00575E13 /* Frameworks */,
 				DD359D4D1A40835A00895C55 /* Set build number */,
 				DDD925721A3F699B00575E13 /* Resources */,
+				DDE85C741A48EB91002D313D /* Copy Playlist Plugins */,
 				DDD925A01A3F69C200575E13 /* Embed Frameworks */,
 				DDFE8EDD1A445F7600AD312E /* Crashlytics */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DDE85C7E1A48ED59002D313D /* PBXTargetDependency */,
+				DDE85CC11A48FB76002D313D /* PBXTargetDependency */,
 			);
 			name = VLCX;
 			productName = VLCX;
 			productReference = DDD925741A3F699B00575E13 /* VLCX.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DDE85C6A1A48EAB9002D313D /* M3UParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDE85C6F1A48EAB9002D313D /* Build configuration list for PBXNativeTarget "M3UParser" */;
+			buildPhases = (
+				DDE85C671A48EAB9002D313D /* Sources */,
+				DDE85C681A48EAB9002D313D /* Frameworks */,
+				DDE85C691A48EAB9002D313D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = M3UParser;
+			productName = M3UParser;
+			productReference = DDE85C6B1A48EAB9002D313D /* M3UParser.plparser */;
+			productType = "com.apple.product-type.bundle";
+		};
+		DDE85CB41A48F9DC002D313D /* VLCXParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDE85CB91A48F9DC002D313D /* Build configuration list for PBXNativeTarget "VLCXParser" */;
+			buildPhases = (
+				DDE85CB11A48F9DC002D313D /* Sources */,
+				DDE85CB21A48F9DC002D313D /* Frameworks */,
+				DDE85CB31A48F9DC002D313D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VLCXParser;
+			productName = VLCXParser;
+			productReference = DDE85CB51A48F9DC002D313D /* VLCXParser.plparser */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -326,6 +509,12 @@
 					DDD925731A3F699B00575E13 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 8C7439RJLG;
+					};
+					DDE85C6A1A48EAB9002D313D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					DDE85CB41A48F9DC002D313D = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -343,6 +532,8 @@
 			projectRoot = "";
 			targets = (
 				DDD925731A3F699B00575E13 /* VLCX */,
+				DDE85C6A1A48EAB9002D313D /* M3UParser */,
+				DDE85CB41A48F9DC002D313D /* VLCXParser */,
 			);
 		};
 /* End PBXProject section */
@@ -368,6 +559,7 @@
 				DD359D481A40798000895C55 /* vob.icns in Resources */,
 				DD359D3C1A40798000895C55 /* generic.icns in Resources */,
 				DD359D3D1A40798000895C55 /* m4a.icns in Resources */,
+				DDA6E3CC1A4765A7001AF52E /* VXPlaylistDocument.xib in Resources */,
 				DD359D4B1A40798000895C55 /* wmv.icns in Resources */,
 				DD359D451A40798000895C55 /* playlist.icns in Resources */,
 				DD359D381A40798000895C55 /* aiff.icns in Resources */,
@@ -376,6 +568,20 @@
 				DD359D461A40798000895C55 /* rm.icns in Resources */,
 				DD359D3A1A40798000895C55 /* avi.icns in Resources */,
 				DD359D421A40798000895C55 /* mp3.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE85C691A48EAB9002D313D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE85CB31A48F9DC002D313D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +625,9 @@
 			files = (
 				DD5874201A42843D000C6677 /* NSDocumentController+VLCXAdditions.m in Sources */,
 				DD5302D11A420BD800B49BD8 /* VXMediaDocument.m in Sources */,
+				DDA6E3CB1A4765A7001AF52E /* VXPlaylistDocument.m in Sources */,
 				DDD925801A3F699B00575E13 /* VXVideoDocument.m in Sources */,
+				DDE85C7B1A48ED14002D313D /* VXPlaylistParser.m in Sources */,
 				DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */,
 				DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */,
 				DDD9257D1A3F699B00575E13 /* main.m in Sources */,
@@ -431,13 +639,44 @@
 				DD2D41CE1A45C80D00BA94C8 /* VXURLMediaDetector.m in Sources */,
 				DDFE8EDC1A44524C00AD312E /* VXVideoAdjustmentsController.m in Sources */,
 				DD359D501A4086E700895C55 /* VXPlaybackController.m in Sources */,
+				DDE85C631A48E7F6002D313D /* VXPlaylistItem.m in Sources */,
 				DD5302D41A420DFF00B49BD8 /* VXAudioPlayerWindow.m in Sources */,
 				DDD9257B1A3F699B00575E13 /* AppDelegate.m in Sources */,
 				DD5302CD1A4208A000B49BD8 /* VXAudioDocument.m in Sources */,
+				DDE85C621A48E7F6002D313D /* VXPlaylist.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE85C671A48EAB9002D313D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE85C7C1A48ED4B002D313D /* M3UParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE85CB11A48F9DC002D313D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE85CBF1A48FA42002D313D /* VLCXParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDE85C7E1A48ED59002D313D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDE85C6A1A48EAB9002D313D /* M3UParser */;
+			targetProxy = DDE85C7D1A48ED59002D313D /* PBXContainerItemProxy */;
+		};
+		DDE85CC11A48FB76002D313D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDE85CB41A48F9DC002D313D /* VLCXParser */;
+			targetProxy = DDE85CC01A48FB76002D313D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DDD925811A3F699B00575E13 /* VXVideoDocument.xib */ = {
@@ -569,6 +808,62 @@
 			};
 			name = Release;
 		};
+		DDE85C701A48EAB9002D313D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VLCX/Playlist Parsers/M3UParser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = plparser;
+			};
+			name = Debug;
+		};
+		DDE85C711A48EAB9002D313D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "VLCX/Playlist Parsers/M3UParser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = plparser;
+			};
+			name = Release;
+		};
+		DDE85CBA1A48F9DC002D313D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VLCX/Playlist Parsers/VLCXParser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = plparser;
+			};
+			name = Debug;
+		};
+		DDE85CBB1A48F9DC002D313D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "VLCX/Playlist Parsers/VLCXParser/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = plparser;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +884,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DDE85C6F1A48EAB9002D313D /* Build configuration list for PBXNativeTarget "M3UParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE85C701A48EAB9002D313D /* Debug */,
+				DDE85C711A48EAB9002D313D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DDE85CB91A48F9DC002D313D /* Build configuration list for PBXNativeTarget "VLCXParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE85CBA1A48F9DC002D313D /* Debug */,
+				DDE85CBB1A48F9DC002D313D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

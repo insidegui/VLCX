@@ -70,6 +70,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="File" id="bib-Uj-vzu">
                         <items>
+                            <menuItem title="New Playlist..." keyEquivalent="n" id="Jia-f4-li7">
+                                <connections>
+                                    <action selector="newDocument:" target="-1" id="a5u-lf-BYC"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
                                 <connections>
                                     <action selector="openDocument:" target="-1" id="bVn-NM-KNZ"/>
@@ -87,6 +92,17 @@
                                         </menuItem>
                                     </items>
                                 </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="e9c-Cd-zGa"/>
+                            <menuItem title="Save" keyEquivalent="s" id="q0F-Hp-tfX">
+                                <connections>
+                                    <action selector="saveDocument:" target="-1" id="aGm-jv-6mk"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save As..." keyEquivalent="S" id="XRM-Tv-9Ds">
+                                <connections>
+                                    <action selector="saveDocumentAs:" target="-1" id="oMd-iU-egb"/>
+                                </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                             <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">

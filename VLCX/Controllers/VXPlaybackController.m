@@ -112,14 +112,34 @@
     [self updateTimeLabelsWithTime:newTime];
 }
 
+- (BOOL)mediaHasVideoTracks
+{
+    for (NSDictionary *track in self.player.media.tracksInformation) {
+        if ([track[@"type"] isEqualToString:@"video"]) return YES;
+    }
+    
+    return NO;
+}
+
 - (void)mediaDidFinishParsing:(VLCMedia *)aMedia
 {
-    if (self.player.videoSize.width > 0) {
-        // set the player window's aspectRatio to the aspect ratio of the video
-        self.view.window.aspectRatio = self.player.videoSize;
+    if ([self mediaHasVideoTracks]) {
+        if (self.player.videoSize.width > 0) {
+            // set the player window's aspectRatio to the aspect ratio of the video
+            self.view.window.aspectRatio = self.player.videoSize;
+            
+            // size the window to fit the video
+            [self.playerWindow sizeToFitVideoSize:self.player.videoSize animated:YES];
+        }
         
-        // size the window to fit the video
-        [self.playerWindow sizeToFitVideoSize:self.player.videoSize animated:YES];
+        if ([self.playerWindow respondsToSelector:@selector(setEnableControlHiding:)]) self.playerWindow.enableControlHiding = YES;
+    } else {
+        if ([self.playerWindow respondsToSelector:@selector(setEnableControlHiding:)]) {
+            [self.playerWindow showTitlebarAnimated:YES];
+            self.view.hidden = NO;
+            self.view.animator.alphaValue = 1;
+            self.playerWindow.enableControlHiding = NO;
+        }
     }
     
     // disable the time slider if the total media time is unknown

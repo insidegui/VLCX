@@ -18,6 +18,8 @@ NSString *VLCXPlaylistUTI = @"br.com.guilhermerambo.VLCX.Playlist";
 @interface VXPlaylistDocument () <VLCMediaDelegate>
 
 @property (strong) VXPlaylist *playlist;
+@property (weak) VXPlaylistItem *currentItem;
+@property (assign) NSUInteger mediaIndex;
 
 @end
 
@@ -27,19 +29,27 @@ NSString *VLCXPlaylistUTI = @"br.com.guilhermerambo.VLCX.Playlist";
 {
     if (!(self = [super init])) return nil;
     
+    self.mediaIndex = -1;
+    
     return self;
 }
 
 - (NSString *)windowNibName {
-    return NSStringFromClass([self class]);
+    return @"VXVideoDocument";
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
+    if (self.playlist.items.count) {
+        [self nextItem:nil];
+    }
+    
     [super windowControllerDidLoadNib:aController];
 }
 
-- (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
+- (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
 {
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
     NSError __block *parseError;
     if (![VXPlaylistParser canWorkWithData:data]) {
         parseError = [NSError errorWithDomain:@"VLCX"
@@ -95,6 +105,39 @@ NSString *VLCXPlaylistUTI = @"br.com.guilhermerambo.VLCX.Playlist";
     [super restoreStateWithCoder:coder];
     
     self.playlist = [coder decodeObjectForKey:@"playlist"];
+}
+
+#pragma mark Playlist Actions
+
+- (IBAction)nextItem:(id)sender
+{
+    [self playItemAtIndex:self.mediaIndex+1];
+}
+
+- (IBAction)previousItem:(id)sender
+{
+    [self playItemAtIndex:self.mediaIndex-1];
+}
+
+- (void)playItemAtIndex:(NSInteger)idx
+{
+    BOOL wasPlaying = NO;
+    if (self.player.playing) {
+        [self.player stop];
+        wasPlaying = YES;
+    }
+    
+    if (idx >= self.playlist.items.count) idx = 0;
+    if (idx < 0) idx = 0;
+    
+    self.mediaIndex = idx;
+    
+    self.currentItem = self.playlist.items[self.mediaIndex];
+    self.media = [VLCMedia mediaWithPath:self.currentItem.path];
+    self.media.delegate = self.playbackController;
+    self.player.media = self.media;
+    
+    if (wasPlaying) [self.player play];
 }
 
 @end

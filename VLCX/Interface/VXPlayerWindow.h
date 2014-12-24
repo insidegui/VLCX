@@ -10,6 +10,8 @@
 
 @interface VXPlayerWindow : NSWindow
 
+@property (assign) BOOL enableControlHiding;
+
 @property (readonly) BOOL titlebarVisible;
 
 - (void)hideTitlebarAnimated:(BOOL)animated;

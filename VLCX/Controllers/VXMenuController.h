@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSInteger const kMainMenuAudioItemTag;
+extern NSInteger const kMainMenuAudioTracksItemTag;
+extern NSInteger const kMainMenuSubtitlesItemTag;
+
 @import VLCKit;
 
 @interface VXMenuController : NSObject

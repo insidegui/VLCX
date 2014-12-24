@@ -26,6 +26,9 @@
 {
     if (!(self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag])) return nil;
 
+    // default is to enable control hiding
+    self.enableControlHiding = YES;
+    
     // make the contentView the full size of the window
     self.styleMask |= NSFullSizeContentViewWindowMask;
     

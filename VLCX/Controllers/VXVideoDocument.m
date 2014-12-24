@@ -13,7 +13,7 @@
 #import "NSDocumentController+VLCXAdditions.h"
 #import "VXPlayerWindow.h"
 
-@interface VXVideoDocument ()
+@interface VXVideoDocument () <NSMenuDelegate>
 
 @property (weak) IBOutlet VXWindowDragView *dragView;
 @property (weak) IBOutlet VXControllerView *controllerView;
@@ -35,7 +35,7 @@
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
     [super windowControllerDidLoadNib:aController];
-    
+
     // add the controllerView as an extra control so it fades out when the cursor leaves the window
     [self.dragView addExtraControl:self.controllerView];
     
@@ -68,6 +68,8 @@
 
 - (void)setInternetURL:(NSURL *)internetURL
 {
+    if (!internetURL) return;
+    
     [super setInternetURL:internetURL];
     
     self.displayName = self.internetURL.lastPathComponent;

@@ -429,6 +429,17 @@
                                     <action selector="playOrPause:" target="-1" id="ogT-Vj-0Lf"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="xFn-SB-F7D"/>
+                            <menuItem title="Next" keyEquivalent="" id="gj9-pj-e8K">
+                                <connections>
+                                    <action selector="nextItem:" target="-1" id="1LF-mY-vfd"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Previous" keyEquivalent="" id="Zb4-vP-8Qd">
+                                <connections>
+                                    <action selector="previousItem:" target="-1" id="po7-r9-zXV"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>

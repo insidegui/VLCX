@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface VXPlaylistDocument : NSDocument
+#import "VXVideoDocument.h"
+
+@interface VXPlaylistDocument : VXVideoDocument
 
 @end

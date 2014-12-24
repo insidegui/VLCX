@@ -33,7 +33,7 @@
 {
     // initialize a VLCMedia object with the file opened
     self.media = [VLCMedia mediaWithPath:url.path];
-    
+
     return YES;
 }
 

@@ -69,6 +69,13 @@
 
 - (void)hideControls
 {
+    if ([self.window respondsToSelector:@selector(enableControlHiding)]) {
+        if (![(VXPlayerWindow *)self.window enableControlHiding]) {
+            [self showControls];
+            return;
+        }
+    }
+    
     [NSAnimationContext beginGrouping];
     [self.playerWindow hideTitlebarAnimated:YES];
     for (NSView *control in self.extraControls) {

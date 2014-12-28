@@ -26,6 +26,7 @@
 @property (strong) VXURLMediaDetector *mediaDetector;
 @property (strong) VXRemoteController *remoteController;
 @property (strong) NSMutableArray *loadingWindows;
+@property (strong) id<NSObject> activity;
 
 @end
 
@@ -105,11 +106,17 @@
 - (void)applicationWillBecomeActive:(NSNotification *)notification
 {
     [self.remoteController appBecameActive];
+    
+    // prevent the computer from going to sleep
+    NSActivityOptions activity = NSActivityIdleDisplaySleepDisabled|NSActivityIdleSystemSleepDisabled|NSActivityAutomaticTerminationDisabled|NSActivityLatencyCritical;
+    self.activity = [[NSProcessInfo processInfo] beginActivityWithOptions:activity reason:@"Player needs to keep the computer awake"];
 }
 
 - (void)applicationWillResignActive:(NSNotification *)notification
 {
     [self.remoteController appResignedActive];
+    
+    [[NSProcessInfo processInfo] endActivity:self.activity];
 }
 
 - (BOOL)applicationOpenUntitledFile:(NSApplication *)sender

@@ -46,8 +46,6 @@
 		DDD925831A3F699B00575E13 /* VXVideoDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD925811A3F699B00575E13 /* VXVideoDocument.xib */; };
 		DDD925851A3F699B00575E13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD925841A3F699B00575E13 /* Images.xcassets */; };
 		DDD925881A3F699B00575E13 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD925861A3F699B00575E13 /* MainMenu.xib */; };
-		DDD9259E1A3F69C200575E13 /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9259D1A3F69C200575E13 /* VLCKit.framework */; };
-		DDD9259F1A3F69C200575E13 /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9259D1A3F69C200575E13 /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925A31A3F6B9400575E13 /* VXPlayerWindow.m */; };
 		DDD925BA1A3F85D100575E13 /* VXWindowDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925B91A3F85D100575E13 /* VXWindowDragView.m */; };
 		DDD925BD1A3F88EE00575E13 /* VXControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD925BC1A3F88EE00575E13 /* VXControllerView.m */; };
@@ -58,6 +56,9 @@
 		DDE85C7C1A48ED4B002D313D /* M3UParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE85C771A48EBE4002D313D /* M3UParser.m */; };
 		DDE85CBF1A48FA42002D313D /* VLCXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE85CBE1A48FA42002D313D /* VLCXParser.m */; };
 		DDE85CC21A48FB82002D313D /* VLCXParser.plparser in Copy Playlist Plugins */ = {isa = PBXBuildFile; fileRef = DDE85CB51A48F9DC002D313D /* VLCXParser.plparser */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DDEA97201A50AED2000BEB27 /* VXRemoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEA971F1A50AED2000BEB27 /* VXRemoteController.m */; };
+		DDEA97211A50B0B4000BEB27 /* VLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9259D1A3F69C200575E13 /* VLCKit.framework */; };
+		DDEA97221A50B0B4000BEB27 /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDD9259D1A3F69C200575E13 /* VLCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */; };
 		DDFE8ED91A444D1A00AD312E /* VXAdjustmentSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */; };
 		DDFE8EDC1A44524C00AD312E /* VXVideoAdjustmentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */; };
@@ -88,7 +89,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DDD9259F1A3F69C200575E13 /* VLCKit.framework in Embed Frameworks */,
+				DDEA97221A50B0B4000BEB27 /* VLCKit.framework in Embed Frameworks */,
 				DD6478E31A44A5D3004E6FF5 /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -144,7 +145,7 @@
 		DD5302D31A420DFF00B49BD8 /* VXAudioPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXAudioPlayerWindow.m; sourceTree = "<group>"; };
 		DD58741E1A42843D000C6677 /* NSDocumentController+VLCXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocumentController+VLCXAdditions.h"; sourceTree = "<group>"; };
 		DD58741F1A42843D000C6677 /* NSDocumentController+VLCXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocumentController+VLCXAdditions.m"; sourceTree = "<group>"; };
-		DD6478E11A44A4AB004E6FF5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		DD6478E11A44A4AB004E6FF5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = vendor/Sparkle.framework; sourceTree = "<group>"; };
 		DDA6E3C81A4765A7001AF52E /* VXPlaylistDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlaylistDocument.h; sourceTree = "<group>"; };
 		DDA6E3C91A4765A7001AF52E /* VXPlaylistDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlaylistDocument.m; sourceTree = "<group>"; };
 		DDA6E3CA1A4765A7001AF52E /* VXPlaylistDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VXPlaylistDocument.xib; sourceTree = "<group>"; };
@@ -160,7 +161,7 @@
 		DDD925821A3F699B00575E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VXVideoDocument.xib; sourceTree = "<group>"; };
 		DDD925841A3F699B00575E13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DDD925871A3F699B00575E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		DDD9259D1A3F69C200575E13 /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
+		DDD9259D1A3F69C200575E13 /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VLCKit.framework; path = vendor/VLCKit.framework; sourceTree = "<group>"; };
 		DDD925A21A3F6B9400575E13 /* VXPlayerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXPlayerWindow.h; sourceTree = "<group>"; };
 		DDD925A31A3F6B9400575E13 /* VXPlayerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXPlayerWindow.m; sourceTree = "<group>"; };
 		DDD925B81A3F85D100575E13 /* VXWindowDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXWindowDragView.h; sourceTree = "<group>"; };
@@ -182,13 +183,15 @@
 		DDE85CBC1A48FA01002D313D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "VLCX/Playlist Parsers/VLCXParser/Info.plist"; sourceTree = SOURCE_ROOT; };
 		DDE85CBD1A48FA42002D313D /* VLCXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLCXParser.h; path = "VLCX/Playlist Parsers/VLCXParser/VLCXParser.h"; sourceTree = SOURCE_ROOT; };
 		DDE85CBE1A48FA42002D313D /* VLCXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLCXParser.m; path = "VLCX/Playlist Parsers/VLCXParser/VLCXParser.m"; sourceTree = SOURCE_ROOT; };
+		DDEA971E1A50AED2000BEB27 /* VXRemoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXRemoteController.h; sourceTree = "<group>"; };
+		DDEA971F1A50AED2000BEB27 /* VXRemoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXRemoteController.m; sourceTree = "<group>"; };
 		DDECDD211A41E5C2002CAAA8 /* VXTimeSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXTimeSliderCell.h; sourceTree = "<group>"; };
 		DDECDD221A41E5C2002CAAA8 /* VXTimeSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXTimeSliderCell.m; sourceTree = "<group>"; };
 		DDFE8ED71A444D1A00AD312E /* VXAdjustmentSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXAdjustmentSliderCell.h; sourceTree = "<group>"; };
 		DDFE8ED81A444D1A00AD312E /* VXAdjustmentSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXAdjustmentSliderCell.m; sourceTree = "<group>"; };
 		DDFE8EDA1A44524C00AD312E /* VXVideoAdjustmentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXVideoAdjustmentsController.h; sourceTree = "<group>"; };
 		DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXVideoAdjustmentsController.m; sourceTree = "<group>"; };
-		DDFE8EDE1A445FD100AD312E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		DDFE8EDE1A445FD100AD312E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = vendor/Crashlytics.framework; sourceTree = "<group>"; };
 		DDFE8EE01A44606A00AD312E /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,8 +201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDFE8EDF1A445FD100AD312E /* Crashlytics.framework in Frameworks */,
+				DDEA97211A50B0B4000BEB27 /* VLCKit.framework in Frameworks */,
 				DD6478E21A44A4AB004E6FF5 /* Sparkle.framework in Frameworks */,
-				DDD9259E1A3F69C200575E13 /* VLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +269,8 @@
 				DDBA4BA31A41BF810019926C /* VXMenuController.m */,
 				DDFE8EDA1A44524C00AD312E /* VXVideoAdjustmentsController.h */,
 				DDFE8EDB1A44524C00AD312E /* VXVideoAdjustmentsController.m */,
+				DDEA971E1A50AED2000BEB27 /* VXRemoteController.h */,
+				DDEA971F1A50AED2000BEB27 /* VXRemoteController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -614,7 +619,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 69b44b9b0e1f177a7fb1b6199e9a040897e9dfc0 22ecca766b464658a34a8526d5dad0b7a255f04ed7c47ac02769feb213488d25";
+			shellScript = "./vendor/Crashlytics.framework/run 69b44b9b0e1f177a7fb1b6199e9a040897e9dfc0 22ecca766b464658a34a8526d5dad0b7a255f04ed7c47ac02769feb213488d25";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -634,6 +639,7 @@
 				DDECDD231A41E5C2002CAAA8 /* VXTimeSliderCell.m in Sources */,
 				DDBA4BA41A41BF810019926C /* VXMenuController.m in Sources */,
 				DDD925A41A3F6B9400575E13 /* VXPlayerWindow.m in Sources */,
+				DDEA97201A50AED2000BEB27 /* VXRemoteController.m in Sources */,
 				DD2D41D11A45D48E00BA94C8 /* VXLoadingWindow.m in Sources */,
 				DDFE8ED91A444D1A00AD312E /* VXAdjustmentSliderCell.m in Sources */,
 				DD2D41CE1A45C80D00BA94C8 /* VXURLMediaDetector.m in Sources */,
@@ -785,6 +791,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/vendor",
 				);
 				INFOPLIST_FILE = VLCX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -801,6 +808,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/vendor",
 				);
 				INFOPLIST_FILE = VLCX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -892,6 +900,7 @@
 				DDE85C711A48EAB9002D313D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDE85CB91A48F9DC002D313D /* Build configuration list for PBXNativeTarget "VLCXParser" */ = {
 			isa = XCConfigurationList;
@@ -900,6 +909,7 @@
 				DDE85CBB1A48F9DC002D313D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

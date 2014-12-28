@@ -15,10 +15,5 @@ profile
 *.moved-aside
 DerivedData
 .idea/
-VLCKit.framework
-VLCKit.framework/*
-Crashlytics.framework
-Crashlytics.framework/*
-Sparkle.framework
-Sparkle.framework/*
+vendor/*
 Config.h

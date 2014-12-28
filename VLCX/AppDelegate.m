@@ -112,4 +112,9 @@
     [self.remoteController appResignedActive];
 }
 
+- (BOOL)applicationOpenUntitledFile:(NSApplication *)sender
+{
+    return NO;
+}
+
 @end

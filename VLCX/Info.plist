@@ -1499,7 +1499,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>141228365</string>
+	<string>141228394</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
@@ -1554,6 +1554,6 @@
 		</dict>
 	</array>
 	<key>VXActualBundleVersion</key>
-	<integer>365</integer>
+	<integer>394</integer>
 </dict>
 </plist>

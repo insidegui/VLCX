@@ -9,6 +9,7 @@
 #import "VXPlaybackController.h"
 #import "VXPlayerWindow.h"
 #import "VXMenuController.h"
+#import "VXRemoteController.h"
 
 @interface VXPlaybackController ()
 
@@ -65,6 +66,9 @@
     // we want to be notified when the player's state or current time changes
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerStateChanged:) name:VLCMediaPlayerStateChanged object:self.player];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerTimeChanged:) name:VLCMediaPlayerTimeChanged object:self.player];
+    
+    // setup remote notification listeners
+    [self setupRemoteControllerListeners];
 }
 
 - (IBAction)playOrPause:(id)sender {
@@ -239,6 +243,24 @@
 - (void)playbackEnded
 {
     [self playbackPaused];
+}
+
+#pragma mark Remote Controller Support
+
+- (void)setupRemoteControllerListeners
+{
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    NSOperationQueue *mq = [NSOperationQueue mainQueue];
+    
+    [nc addObserverForName:VXRemoteControlWantsToPlayNotification object:nil queue:mq usingBlock:^(NSNotification *note) {
+        [self playOrPause:nil];
+    }];
+    [nc addObserverForName:VXRemoteControlWantsToGoUpNotification object:nil queue:mq usingBlock:^(NSNotification *note) {
+        [self volumeUp];
+    }];
+    [nc addObserverForName:VXRemoteControlWantsToGoDownNotification object:nil queue:mq usingBlock:^(NSNotification *note) {
+        [self volumeDown];
+    }];
 }
 
 @end

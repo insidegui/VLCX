@@ -12,6 +12,7 @@
 #import "NSDocumentController+VLCXAdditions.h"
 #import "VXURLMediaDetector.h"
 #import "VXLoadingWindow.h"
+#import "VXRemoteController.h"
 
 // you can safely comment out the line below
 #import "Config.h"
@@ -23,6 +24,7 @@
 @interface AppDelegate ()
 
 @property (strong) VXURLMediaDetector *mediaDetector;
+@property (strong) VXRemoteController *remoteController;
 @property (strong) NSMutableArray *loadingWindows;
 
 @end
@@ -96,6 +98,18 @@
     #ifdef CRASHLYTICS_API_KEY
     [Crashlytics startWithAPIKey:CRASHLYTICS_API_KEY];
     #endif
+    
+    self.remoteController = [VXRemoteController sharedController];
+}
+
+- (void)applicationWillBecomeActive:(NSNotification *)notification
+{
+    [self.remoteController appBecameActive];
+}
+
+- (void)applicationWillResignActive:(NSNotification *)notification
+{
+    [self.remoteController appResignedActive];
 }
 
 @end

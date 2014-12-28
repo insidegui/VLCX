@@ -10,6 +10,7 @@
 #import "VXPlaylistParser.h"
 #import "VXPlaylistItem.h"
 #import "VXPlaylist.h"
+#import "VXRemoteController.h"
 
 NSString *VLCXPlaylistUTI = @"br.com.guilhermerambo.VLCX.Playlist";
 
@@ -42,6 +43,14 @@ NSString *VLCXPlaylistUTI = @"br.com.guilhermerambo.VLCX.Playlist";
     if (self.playlist.items.count) {
         [self nextItem:nil];
     }
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserverForName:VXRemoteControlWantsToGoForwardNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        [self nextItem:nil];
+    }];
+    [nc addObserverForName:VXRemoteControlWantsToGoBackwardNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        [self previousItem:nil];
+    }];
     
     [super windowControllerDidLoadNib:aController];
 }
@@ -105,6 +114,13 @@ NSString *VLCXPlaylistUTI = @"br.com.guilhermerambo.VLCX.Playlist";
     [super restoreStateWithCoder:coder];
     
     self.playlist = [coder decodeObjectForKey:@"playlist"];
+}
+
+- (void)close
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    [super close];
 }
 
 #pragma mark Playlist Actions

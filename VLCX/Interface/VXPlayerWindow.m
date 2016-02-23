@@ -8,10 +8,21 @@
 
 #import "VXPlayerWindow.h"
 
+#import <objc/runtime.h>
+
 @interface VXPlayerWindow ()
 
 @property (readonly) NSVisualEffectView *titlebarView;
 
+@end
+
+@interface VXPlayerWindowFrame : NSView
++ (void)installPlayerWindowTitleTextSwizzles;
+@end
+
+@interface VXPlayerWindowFrame (Swizzles)
+- (NSBackgroundStyle)_NS_backgroundStyleForTitleTextField;
+- (NSColor *)_NS_currentTitleColor;
 @end
 
 // this is just a hack so we can access titlebarView without warnings from the compiler,
@@ -21,6 +32,11 @@
 @end
 
 @implementation VXPlayerWindow
+
++ (void)load
+{
+    [VXPlayerWindowFrame installPlayerWindowTitleTextSwizzles];
+}
 
 - (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
 {
@@ -42,6 +58,19 @@
     [self hideTitlebarAnimated:NO];
     
     return self;
+}
+
+- (void)makeKeyAndOrderFront:(id)sender
+{
+    [super makeKeyAndOrderFront:sender];
+    
+    [self configureTitlebar];
+}
+
+- (void)configureTitlebar
+{
+    self.titlebarView.material = NSVisualEffectMaterialDark;
+    self.titlebarView.state = NSVisualEffectStateActive;
 }
 
 - (void)hideTitlebarAnimated:(BOOL)animated
@@ -103,6 +132,40 @@
     
     [self setFrame:newRect display:YES animate:animate];
     [self center];
+}
+
+@end
+
+@implementation VXPlayerWindowFrame
+
++ (void)installPlayerWindowTitleTextSwizzles
+{
+    Class targetClass = NSClassFromString(@"NSThemeFrame");
+    NSArray *methodsToOverride = @[@"_backgroundStyleForTitleTextField", @"_currentTitleColor"];
+    for (NSString *selector in methodsToOverride) {
+        Method m1 = class_getInstanceMethod(targetClass, NSSelectorFromString(selector));
+        Method m2 = class_getInstanceMethod([self class], NSSelectorFromString([selector stringByReplacingOccurrencesOfString:@"_" withString:@"_VX_"]));
+        class_addMethod(targetClass, NSSelectorFromString([selector stringByReplacingOccurrencesOfString:@"_" withString:@"_NS_"]), method_getImplementation(m1), method_getTypeEncoding(m1));
+        method_exchangeImplementations(m1, m2);
+    }
+}
+
+- (NSBackgroundStyle)_VX_backgroundStyleForTitleTextField
+{
+    if ([self.window isKindOfClass:[VXPlayerWindow class]]) {
+        return NSBackgroundStyleDark;
+    } else {
+        return [self _NS_backgroundStyleForTitleTextField];
+    }
+}
+
+- (NSColor *)_VX_currentTitleColor
+{
+    if ([self.window isKindOfClass:[VXPlayerWindow class]]) {
+        return [NSColor secondaryLabelColor];
+    } else {
+        return [self _NS_currentTitleColor];
+    }
 }
 
 @end

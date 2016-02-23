@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="VXVideoDocument">
@@ -33,7 +33,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="LEa-r0-YBo" customClass="VLCVideoView">
                                 <rect key="frame" x="0.0" y="0.0" width="640" height="360"/>
                             </customView>
-                            <visualEffectView hidden="YES" appearanceType="vibrantDark" alphaValue="0.0" blendingMode="withinWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="TlB-vP-t32" customClass="VXControllerView">
+                            <visualEffectView hidden="YES" appearanceType="vibrantDark" blendingMode="withinWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="TlB-vP-t32" customClass="VXControllerView">
                                 <rect key="frame" x="100" y="51" width="440" height="65"/>
                                 <subviews>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aTo-rq-maJ" userLabel="Time Slider">
@@ -89,7 +89,7 @@ IA
                                             <outlet property="menu" destination="yQo-hD-0ca" id="5iB-9C-8Gm"/>
                                         </connections>
                                     </button>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fgn-Nq-Z4X">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgn-Nq-Z4X">
                                         <rect key="frame" x="11" y="5" width="50" height="14"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="00:00:00" id="XAt-67-Rsb">
                                             <font key="font" metaFont="smallSystem"/>
@@ -97,7 +97,7 @@ IA
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TVy-Vu-IVB">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TVy-Vu-IVB">
                                         <rect key="frame" x="373" y="5" width="58" height="14"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="- 00:00:00" id="4ZI-4L-Rei">
                                             <font key="font" metaFont="smallSystem"/>
@@ -117,7 +117,7 @@ IA
                                     <constraint firstAttribute="bottom" secondItem="fgn-Nq-Z4X" secondAttribute="bottom" constant="5" id="xyT-ky-9ZI"/>
                                 </constraints>
                             </visualEffectView>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-CJ-uZI">
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="withinWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-CJ-uZI">
                                 <rect key="frame" x="390" y="0.0" width="250" height="360"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-tJ-UIj">
@@ -128,7 +128,7 @@ IA
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-zf-AWz">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-zf-AWz">
                                         <rect key="frame" x="18" y="265" width="70" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Brightness" id="Nnm-O3-UxH">
                                             <font key="font" metaFont="system"/>
@@ -143,7 +143,7 @@ IA
                                             <action selector="contrastSliderAction:" target="Wjk-Ry-Trw" id="t9d-kf-bCh"/>
                                         </connections>
                                     </slider>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vUz-OD-CmX">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUz-OD-CmX">
                                         <rect key="frame" x="18" y="215" width="58" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Contrast" id="I3s-Sy-e4H">
                                             <font key="font" metaFont="system"/>
@@ -158,7 +158,7 @@ IA
                                             <action selector="gammaSliderAction:" target="Wjk-Ry-Trw" id="Rah-us-vS1"/>
                                         </connections>
                                     </slider>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o5g-7f-1gF">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5g-7f-1gF">
                                         <rect key="frame" x="18" y="165" width="53" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gamma" id="ori-A9-f05">
                                             <font key="font" metaFont="system"/>
@@ -188,7 +188,7 @@ IA
                                             <action selector="saturationSliderAction:" target="Wjk-Ry-Trw" id="JC4-LS-YLi"/>
                                         </connections>
                                     </slider>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7V-5d-9dk">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7V-5d-9dk">
                                         <rect key="frame" x="18" y="65" width="68" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Saturation" id="9oq-kB-6je">
                                             <font key="font" metaFont="system"/>

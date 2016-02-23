@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD2A45231C7D198B00CCB463 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2A45221C7D198B00CCB463 /* Fabric.framework */; };
 		DD2D41CE1A45C80D00BA94C8 /* VXURLMediaDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2D41CD1A45C80D00BA94C8 /* VXURLMediaDetector.m */; };
 		DD2D41D11A45D48E00BA94C8 /* VXLoadingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2D41D01A45D48E00BA94C8 /* VXLoadingWindow.m */; };
 		DD359D381A40798000895C55 /* aiff.icns in Resources */ = {isa = PBXBuildFile; fileRef = DD359D241A40798000895C55 /* aiff.icns */; };
@@ -113,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD2A45221C7D198B00CCB463 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = vendor/Fabric.framework; sourceTree = "<group>"; };
 		DD2D41CC1A45C80D00BA94C8 /* VXURLMediaDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXURLMediaDetector.h; sourceTree = "<group>"; };
 		DD2D41CD1A45C80D00BA94C8 /* VXURLMediaDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VXURLMediaDetector.m; sourceTree = "<group>"; };
 		DD2D41CF1A45D48E00BA94C8 /* VXLoadingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VXLoadingWindow.h; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				DDFE8EDF1A445FD100AD312E /* Crashlytics.framework in Frameworks */,
 				DDEA97211A50B0B4000BEB27 /* VLCKit.framework in Frameworks */,
 				DD6478E21A44A4AB004E6FF5 /* Sparkle.framework in Frameworks */,
+				DD2A45231C7D198B00CCB463 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +316,7 @@
 		DDD9256B1A3F699B00575E13 = {
 			isa = PBXGroup;
 			children = (
+				DD2A45221C7D198B00CCB463 /* Fabric.framework */,
 				DD6478E11A44A4AB004E6FF5 /* Sparkle.framework */,
 				DDFE8EDE1A445FD100AD312E /* Crashlytics.framework */,
 				DDD9259D1A3F69C200575E13 /* VLCKit.framework */,

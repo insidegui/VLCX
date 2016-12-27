@@ -1,3 +1,9 @@
+## IMPORTANT: this project is abandoned
+
+***As of December 2016, this project is officially abandoned since I don't  have time to dedicate to it anymore.***
+
+------
+
 # VLCX
 
 VLCX is basically QuickTime Player, but with libvlc as a backend. The interface aims to be pretty much identical to QuickTime's, but there's still a lot to do to get there.
